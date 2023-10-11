@@ -1,0 +1,14 @@
+%include "asm_io.inc"
+
+
+segment .data
+l1: dd 12
+
+segment .text
+        global  _main
+		
+_main:
+       mov eax,[l1]
+       call print_int
+
+; FTGUPP :)

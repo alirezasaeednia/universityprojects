@@ -1,0 +1,23 @@
+function int main(){
+	float[] a={1.32,22.32,53.34,-90,53};
+	for (int i = 0; i < 4; i=i+1)
+	{
+		for (int j = 0; j < 4; j=j+1)
+		{
+			if (a[i]<a[j])
+			{
+				float temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+			
+		}
+		
+	}
+	for (int i = 0; i < 4; i=i+1)
+	{
+		
+	printf("%.4f	,",a[i]);
+	}
+	
+}
