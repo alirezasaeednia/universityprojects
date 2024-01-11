@@ -3,6 +3,7 @@ import ReactDOM  from "react-dom";
 import App from './App';
 import Sign from './pages/sign';
 import Result from "./pages/searchresult";
+import Up from "./pages/signup";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
       },   {
         path: "searchresult",
         element: <Result/>
-      },
+  },
+  {
+    path: "signup",
+    element: <Up/>
+  },
 ]);
   
 const root = ReactDOM.createRoot(document.getElementById('root'));

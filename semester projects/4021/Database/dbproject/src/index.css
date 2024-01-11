@@ -8,6 +8,11 @@ html{
   
 }
 
+button{
+  font-family: YekanBakh,Tahoma;
+
+}
+
 #hi{
   height: 10%;
   width: 10%;
@@ -65,6 +70,91 @@ gap: 2rem;
     border-radius: 8px;
 
   }
+
+
+  .moshaver{
+    text-align: center;
+    background-color: #a7eca9;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .myselect{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    font-weight: bold;
+  }
+  .filter{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   gap: 3px;
+  }
+
+  .filter button{
+    font-family: YekanBakh,Tahoma;
+    
+
+    width: 100px;
+    height: 100px;
+    animation: jelly 0.3s ease-in-out;
+
+  }
+
+  .up{
+    margin: 20px;
+    background-color: rgb(212, 150, 150);
+   text-align: center;
+  }
+
+  .up button{
+    font-family: YekanBakh,Tahoma;
+margin: 12px;
+  }
+
+  .button:hover {background-color: #3e8e41}
+
+.filter button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #ff0000;
+  transform: translateY(4px);
+}
+
+.filter :nth-child(1) button:hover {
+  background-color: #00ff08;
+}
+.filter :nth-child(2) button:hover {
+  background-color: rgb(42, 59, 43);
+  color:white;
+}
+
+.filter :nth-child(3) button:hover {
+  background-color: #8ceb8f;
+}
+
+.filter :nth-child(4) button:hover {
+  background-color: #fbff00;
+}
+
+.filter :nth-child(5) button:hover {
+  background-color: #00ffc8;
+}
+
+.filter :nth-child(6) button:hover {
+  background-color: rgb(0, 17, 255);
+  color:white;
+}
+
+.filter :nth-child(7) button:hover {
+  background-color: #ae00ff;
+}
+
+.filter :nth-child(8) button:hover {
+  background-color: #ff2600;
+}
+
 
   #options{
     position: absolute;
@@ -132,7 +222,6 @@ gap: 2rem;
     font-family: YekanBakh,Tahoma;
     height: 50px;
   }
-  
 
   .searchbar {
     border-radius:8px;

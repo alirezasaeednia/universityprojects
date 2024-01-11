@@ -15,6 +15,7 @@ const Sign = () => {
                 
                 <input placeholder="شماره همراه یا ایمیل"></input>
                 <button>ورود</button>
+                <button>ثبت نام در کلید</button>
                 <button>بازگشت</button>
                 
             </div>
