@@ -4,6 +4,7 @@ import App from './App';
 import Sign from './pages/sign';
 import Result from "./pages/searchresult";
 import Up from "./pages/signup";
+import Profile from "./pages/profile";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -24,6 +25,9 @@ const router = createBrowserRouter([
   {
     path: "signup",
     element: <Up/>
+  },  {
+    path: "profile",
+    element: <Profile/>
   },
 ]);
   
