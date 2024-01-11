@@ -1,5 +1,7 @@
 import React from "react";
 import NavigationBar from '../Components/NavigationBar';
+import Back from "../Components/goback";
+
 
 const Result = () => {
     
@@ -7,6 +9,8 @@ const Result = () => {
 
         <div>
             <NavigationBar />
+            <Back/>
+
             <div className="whole">
                 <div className="filter">
                     <div id="خرید"><button>خرید</button></div>

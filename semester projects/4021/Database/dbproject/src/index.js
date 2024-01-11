@@ -5,6 +5,7 @@ import Sign from './pages/sign';
 import Result from "./pages/searchresult";
 import Up from "./pages/signup";
 import Profile from "./pages/profile";
+import Agahi from "./pages/agahi";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
   },  {
     path: "profile",
     element: <Profile/>
+  }, {
+    path: "agahi",
+    element: <Agahi/>
   },
 ]);
   

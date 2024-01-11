@@ -1,6 +1,6 @@
 import React from "react";
 import NavigationBar from '../Components/NavigationBar';
-
+import Back from "../Components/goback";
 const Sign = () => {
     
     return (
@@ -15,9 +15,8 @@ const Sign = () => {
                 
                 <input placeholder="شماره همراه یا ایمیل"></input>
                 <button>ورود</button>
-                <button>ثبت نام در کلید</button>
-                <button>بازگشت</button>
-                
+                <a href="signup" >ثبت نام در کلید</a>
+                <Back/>
             </div>
         </div>
     );

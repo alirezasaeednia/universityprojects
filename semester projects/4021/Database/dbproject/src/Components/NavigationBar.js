@@ -37,7 +37,7 @@ const NavigationBar = () => {
                         
             </div>
                 )}
-                <button id="agahi" >ثبت آگهی مشاورین</button>
+                <a  href="agahi" id="agahi" >ثبت آگهی مشاورین</a>
         </div>
       </div>
     );

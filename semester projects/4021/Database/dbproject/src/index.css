@@ -43,11 +43,17 @@ gap: 2rem;
   width: 200px;
   font-size: 1rem;
   font-family: YekanBakh,Tahoma;
+  text-align: center;
+  border: 5px rgb(255, 0, 0);
   height: 30px;
   color: aliceblue;
   font-weight: bold;
   cursor: pointer;
   margin-top: 1rem;
+}
+
+#myagahi{
+  text-align: center;
 }
 .stuff:hover a {
   opacity: 30%;
@@ -59,7 +65,13 @@ gap: 2rem;
     height: 60vh;
     margin:50px 100px;
   }
-
+.main_sign_in a{
+  margin: 10px;
+  background-color: #dd0000;
+  border-radius: 2px;
+  border: 1px solid black;
+  color: rgb(255, 255, 255);
+}
   
   .container img {
     width: 100%;

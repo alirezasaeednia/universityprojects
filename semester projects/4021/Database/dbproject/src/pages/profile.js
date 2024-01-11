@@ -1,11 +1,15 @@
 import React from "react";
 import NavigationBar from '../Components/NavigationBar';
+import Back from "../Components/goback";
+
 const Profile = () => {
     
     return (
 
         <div>
             <NavigationBar />
+            <Back/>
+
             <div className="toppicture">
                 <img src="https://cdn-cashy-static-assets.lucidchart.com/marketing/blog/2019Q2/classroom-seating-chart/classroom-seating-header.png"></img>
             </div>

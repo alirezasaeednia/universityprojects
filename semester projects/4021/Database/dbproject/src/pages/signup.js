@@ -1,6 +1,7 @@
 import React from "react";
 import NavigationBar from "../Components/NavigationBar";
 import { useState } from "react";
+import Back from "../Components/goback";
 
 const Up = () => {
   const [isDiv1Enabled, setDiv1Enabled] = useState(false);
@@ -21,7 +22,9 @@ const Up = () => {
       <div className="myselect">
         <div><button onClick={enableDiv1}>مشاور</button></div>
         <div><button onClick={enableDiv2}>مدیر آژانس</button> </div>
-      </div>
+          </div>
+          <Back/>
+
       {isDiv1Enabled && <div className="moshaver">
         <div>
           <a>اطلاعات مشاور</a>
