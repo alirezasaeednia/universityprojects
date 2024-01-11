@@ -5,7 +5,9 @@ import { useState } from "react";
 const Agahi = () => {
     const [photos, setPhotos] = useState([]);
     const [mainPhoto, setMainPhoto] = useState(null);
-    const [selectedButton, setSelectedButton] = useState(null);
+    const [selectedButton1, setSelectedButton1] = useState(null);
+    const [selectedButton2, setSelectedButton2] = useState(null);
+    const [selectedButton3, setSelectedButton3] = useState(null);
 
     const handlePhotoUpload = (event) => {
       const uploadedPhotos = Array.from(event.target.files);
@@ -22,14 +24,19 @@ const Agahi = () => {
         setSelectedButtons([...selectedButtons, button]);
       }
     };
-    const handlestrict = (button) => {
-        if (selectedButton === button) {
-          setSelectedButton(null);
-        } else {
-          setSelectedButton(button);
-        }
-      };
 
+    const handleButtonClick2 = (buttonId) => {
+        if (buttonId >= 1 && buttonId <= 4) {
+          setSelectedButton1(buttonId);
+        }
+        
+        if (buttonId >= 5 && buttonId <= 10) {
+          setSelectedButton2(buttonId);
+        }
+        if (buttonId >= 11 && buttonId <= 12) {
+            setSelectedButton3(buttonId);
+          }
+      };
     
   const handlePhotoClick = (index) => {
     setMainPhoto(photos[index]);
@@ -44,16 +51,19 @@ const Agahi = () => {
       <div id="myagahi">
         <div id="mahali">
           <a>محله</a>
-          <button>شهر مورد نظر خود را وارد کنید</button>
-          <a>شهر</a>
+          <input placeholder=">شهر مورد نظر خود را وارد کنید"></input>
 
-          <button>محله مورد نظر خود را وارد کنید</button>
+          <a>شهر</a>
+          <input placeholder=">محله مورد نظر خود را وارد کنید"></input>
+
         </div>
         <div id="mahali2">
           <a>رهن</a>
           <input placeholder="مبلغ رهن را به تومان وارد کنید" />
-          <button>رهن کامل</button>
-          <button>قیمت توافقی</button>
+          <button onClick={() => handleButtonClick2(11)}
+        className={selectedButton3 === 11 ? 'selected4' : ''}>رهن کامل</button>
+          <button onClick={() => handleButtonClick2(12)}
+        className={selectedButton3 ===12 ? 'selected4' : ''}>قیمت توافقی</button>
         </div>
 
         <div id="mahali3">
@@ -68,30 +78,30 @@ const Agahi = () => {
 
         <div id="mahali4">
           <a>نوع کاربری</a>
-          <button onClick={() => handlestrict('Button 32')}
-        className={selectedButton === 'Button 32' ? 'selected' : ''}>مسکونی</button>
-          <button onClick={() => handlestrict('Button 33')}
-        className={selectedButton === 'Button 33' ? 'selected' : ''}>تجاری</button>
-          <button onClick={() => handlestrict('Button 34')}
-        className={selectedButton === 'Button 34' ? 'selected' : ''}>اداری</button>
-          <button onClick={() => handlestrict('Button 3526')}
-        className={selectedButton === 'Button 35' ? 'selected' : ''}>صنعتی</button>
+          <button onClick={() => handleButtonClick2(1)}
+        className={selectedButton1 === 1 ? 'selected' : ''}>مسکونی</button>
+          <button onClick={() => handleButtonClick2(2)}
+        className={selectedButton1 === 2 ? 'selected' : ''}>تجاری</button>
+          <button onClick={() => handleButtonClick2(3)}
+        className={selectedButton1 === 3 ? 'selected' : ''}>اداری</button>
+          <button onClick={() => handleButtonClick2(4)}
+        className={selectedButton1 === 4 ? 'selected' : ''}>صنعتی</button>
         </div>
 
         <div id="mahali5">
           <a>تعداد خواب</a>
-          <button onClick={() => handlestrict('Button 26')}
-        className={selectedButton === 'Button 26' ? 'selected' : ''}>یک خوابه</button>
-          <button onClick={() => handlestrict('Button 27')}
-        className={selectedButton === 'Button 27' ? 'selected' : ''}>دو خوابه</button>
-          <button onClick={() => handlestrict('Button 28')}
-        className={selectedButton === 'Button 28' ? 'selected' : ''}>سه خوابه</button>
-          <button onClick={() => handlestrict('Button 29')}
-        className={selectedButton === 'Button 29' ? 'selected' : ''}>چهار خوابه</button>
-          <button onClick={() => handlestrict('Button 30')}
-        className={selectedButton === 'Button 30' ? 'selected' : ''}>پنج خوابه</button>
-          <button onClick={() => handlestrict('Button 31')}
-        className={selectedButton === 'Button 31' ? 'selected' : ''}>شش خوابه</button>
+          <button onClick={() => handleButtonClick2(5)}
+        className={selectedButton2 === 5 ? 'selected4' : ''}>یک خوابه</button>
+          <button onClick={() => handleButtonClick2(6)}
+        className={selectedButton2 === 6 ? 'selected4' : ''}>دو خوابه</button>
+          <button onClick={() => handleButtonClick2(7)}
+        className={selectedButton2 === 7 ? 'selected4' : ''}>سه خوابه</button>
+          <button onClick={() => handleButtonClick2(8)}
+        className={selectedButton2 === 8 ? 'selected4' : ''}>چهار خوابه</button>
+          <button onClick={() => handleButtonClick2(9)}
+        className={selectedButton2 === 9 ? 'selected4' : ''}>پنج خوابه</button>
+          <button onClick={() => handleButtonClick2(10)}
+        className={selectedButton2 === 10 ? 'selected4' : ''}>شش خوابه</button>
         </div>
 
         <div id="mahali6">
