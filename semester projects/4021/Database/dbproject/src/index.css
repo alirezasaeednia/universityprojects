@@ -5,9 +5,17 @@
 
 html{
   font-family: YekanBakh,Tahoma;
-
+  
 }
 
+#hi{
+  height: 10%;
+  width: 10%;
+}
+.main_sign_in{
+text-align: center;
+margin: 200px;
+}
 .navigationbar{
   position: relative;
   border-top: 1px solid ;
@@ -68,7 +76,10 @@ gap: 2rem;
     margin-top: 10px;
     animation: jelly 0.3s ease-in-out;
   }
-
+  .main_sign_in button{
+    font-family: YekanBakh,Tahoma;
+    margin: 12px;
+  }
 
 
    #option1:hover{

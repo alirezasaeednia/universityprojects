@@ -7,8 +7,12 @@ const Sign = () => {
 
         <div>
             <NavigationBar />
-            <div>
-                <div className="imageinside"></div>
+            <div className="main_sign_in">
+                <div className="imageinside">
+                    <img src="https://cdn.kilid.com/favicons/new/kilid-sign.png" id="hi" ></img>
+                    <nav>به سایت کلید خوش آمدید</nav>
+                </div>
+                
                 <input placeholder="شماره همراه یا ایمیل"></input>
                 <button>ورود</button>
                 <button>بازگشت</button>
