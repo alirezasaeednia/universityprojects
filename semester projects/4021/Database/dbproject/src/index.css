@@ -52,6 +52,17 @@ gap: 2rem;
   margin-top: 1rem;
 }
 
+.photo-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.photo-container img{
+  flex-basis: 10%;
+  box-sizing: border-box;
+}
 #myagahi{
   text-align: center;
 }
