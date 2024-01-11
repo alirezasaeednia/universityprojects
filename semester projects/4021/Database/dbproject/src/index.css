@@ -10,7 +10,16 @@ html{
 
 button{
   font-family: YekanBakh,Tahoma;
+  transition: background-color 0.3s ease;
 
+}
+
+button.selected {
+  background-color: #00ff00;
+}
+
+button.selected2 {
+  background-color: #ff00f2;
 }
 
 #hi{
@@ -52,6 +61,10 @@ gap: 2rem;
   margin-top: 1rem;
 }
 
+.selected {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
 .photo-container{
   display: flex;
   flex-direction: row;
@@ -65,6 +78,15 @@ gap: 2rem;
 }
 #myagahi{
   text-align: center;
+}
+
+#whole{
+  background-color: #e7e9d0;
+  font-weight: bold;
+}
+
+#whole button{
+  font-weight: bold;
 }
 .stuff:hover a {
   opacity: 30%;
@@ -284,6 +306,51 @@ margin: 12px;
       position: relative;
 
   }
+
+  #mahali{
+    border: 2px solid black;
+    padding: 10px;
+  }
+
+  #mahali2{
+    border: 2px solid black;
+    padding: 10px;
+  }
+  
+  #mahali3{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+  }
+  
+  #mahali4{
+    border: 2px solid black;
+    padding: 10px;
+  }
+  #mahali5{
+    border: 2px solid black;
+    padding: 10px;
+  }
+  #mahali6{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+  }
+  #mahali7{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+  }
+  #mahali8{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 10px;
+  }
+  #mahali9{
+    border: 2px solid black;
+    padding: 10px;
+  }
+  #mahali10{
+    border: 2px solid black;
+    padding: 10px;
+  }
+  
   
   #results{
     display: flex;
