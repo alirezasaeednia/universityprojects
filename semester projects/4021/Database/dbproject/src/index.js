@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM  from "react-dom";
 import App from './App';
 import Sign from './pages/sign';
+import Result from "./pages/searchresult";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -15,6 +16,9 @@ const router = createBrowserRouter([
     {
         path: "sign",
         element: <Sign/>
+      },   {
+        path: "searchresult",
+        element: <Result/>
       },
 ]);
   
