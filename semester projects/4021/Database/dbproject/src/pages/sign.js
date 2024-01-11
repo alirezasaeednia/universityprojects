@@ -9,7 +9,10 @@ const Sign = () => {
             <NavigationBar />
             <div>
                 <div className="imageinside"></div>
-                <div></div>
+                <input placeholder="شماره همراه یا ایمیل"></input>
+                <button>ورود</button>
+                <button>بازگشت</button>
+                
             </div>
         </div>
     );
