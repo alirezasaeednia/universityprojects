@@ -7,7 +7,13 @@ const Agahi = () => {
     const [mainPhoto, setMainPhoto] = useState(null);
     const [selectedButton1, setSelectedButton1] = useState(null);
     const [selectedButton2, setSelectedButton2] = useState(null);
-    const [selectedButton3, setSelectedButton3] = useState(null);
+  const [selectedButton3, setSelectedButton3] = useState(null);
+  
+  
+  const [search, setSearch] = useState(false);
+  const toggleSearch = () => {
+      setSearch(!search);
+  };
 
     const handlePhotoUpload = (event) => {
       const uploadedPhotos = Array.from(event.target.files);
@@ -49,6 +55,13 @@ const Agahi = () => {
       <Back />
 
       <div id="myagahi">
+      <div id="mahali0">
+          <button onClick={toggleSearch}>آژانس مورد نظر را انتخاب کنید</button>
+          {search && (<div id="choosingajans">
+            
+          </div>)}
+          <input placeholder="آژانس مورد نظر شما"></input>
+        </div>
         <div id="mahali">
           <a>محله</a>
           <input placeholder=">شهر مورد نظر خود را وارد کنید"></input>
