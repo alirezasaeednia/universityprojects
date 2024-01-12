@@ -8,6 +8,13 @@ html{
   
 }
 
+input{
+  text-align: right;
+  font-family: YekanBakh,Tahoma;
+  font-size: 1rem;
+
+}
+
 button{
   font-family: YekanBakh,Tahoma;
   transition: background-color 0.3s ease;
