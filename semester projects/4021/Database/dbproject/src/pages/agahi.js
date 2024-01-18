@@ -8,6 +8,8 @@ const Agahi = () => {
     const [selectedButton1, setSelectedButton1] = useState(null);
     const [selectedButton2, setSelectedButton2] = useState(null);
   const [selectedButton3, setSelectedButton3] = useState(null);
+  const [tableData, setTableData] = useState([]);
+
   
   
   const [search, setSearch] = useState(false);
@@ -57,9 +59,11 @@ const Agahi = () => {
       <div id="myagahi">
       <div id="mahali0">
           <button onClick={toggleSearch}>آژانس مورد نظر را انتخاب کنید</button>
-          {search && (<div id="choosingajans">
-            
-          </div>)}
+          {search && (<div id="choosing ajans">
+    {tableData.map(row => (
+      <div key={row.id}>{row.name}</div>
+    ))}
+  </div>}
           <input placeholder="آژانس مورد نظر شما"></input>
         </div>
         <div id="mahali">
