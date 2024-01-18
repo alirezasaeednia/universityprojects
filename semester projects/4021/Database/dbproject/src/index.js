@@ -6,6 +6,7 @@ import Result from "./pages/searchresult";
 import Up from "./pages/signup";
 import Profile from "./pages/profile";
 import Agahi from "./pages/agahi";
+import Ajans from "./pages/ajansamlak";
 import {
     createBrowserRouter,
     RouterProvider,
@@ -32,7 +33,10 @@ const router = createBrowserRouter([
   }, {
     path: "agahi",
     element: <Agahi/>
-  },
+  },{
+  path: "ajansamlak",
+  element: <Ajans/>
+},
 ]);
   
 const root = ReactDOM.createRoot(document.getElementById('root'));

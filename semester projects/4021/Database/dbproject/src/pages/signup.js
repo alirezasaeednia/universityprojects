@@ -13,10 +13,8 @@ const Up = () => {
 
   const [moshavertel, setMoshavertel] = useState('');
   const [modirtel, setModirtel] = useState('');
-  const [code, setCode] = useState('');
   const [modirname, setModirname] = useState('');
   const [modirfamily, setModirfamily] = useState('');
-  const [modirnumber, setModirnumber] = useState('');
 
   const [search, setSearch] = useState(false);
 
@@ -33,7 +31,7 @@ const Up = () => {
   };
 
   const handleInsertAjans = () => {
-    axios.post("http://localhost:8001/api/modir", { city,phone,name,moshavertel,modirtel,code,modirname,modirfamily,modirnumber})
+    axios.post("http://localhost:8001/api/ajans", { city,phone,name,moshavertel,modirtel,selectedButton1,modirname,modirfamily})
       .then(response => {
         console.log(response.data.message); // Handle successful insertion
       })
@@ -108,10 +106,10 @@ const Up = () => {
           <a>اطلاعات آژانس</a>
         </div>
         <div>
-          <input placeholder="*نام آژانس ( فارسی)" ></input>
+          <input placeholder="*نام آژانس ( فارسی)"  value={name} onChange={e=>setName(e.target.value)}></input>
         </div>
         <div>
-          <input placeholder="تلفن آژانس "></input>
+          <input placeholder="تلفن آژانس " value={phone} onChange={e=>setPhone(e.target.value)}></input>
         </div>
 
         <div>
@@ -130,20 +128,20 @@ const Up = () => {
 
           </div>)}
          
-          <input placeholder="*شهر حوزه فعالیت   "></input>
+          <input placeholder="*شهر حوزه فعالیت   " value={city} onChange={e=>setcity(e.target.value)}></input>
         </div>
         <div>
           <a>اطلاعات مدیر</a>
         </div>
         <div>
-          <input placeholder="*نام"></input>
+          <input placeholder="*نام" value={modirname}  onChange={e=>setModirname(e.target.value)}></input>
         </div>
         <div>
-          <input placeholder="نام خانوادگی"></input>
+          <input placeholder="نام خانوادگی" value={modirfamily} onChange={e=>setModirfamily(e.target.value)}></input>
         </div>
 
         <div>
-          <input placeholder="*شماره تلفن همراه "></input>
+          <input placeholder="*شماره تلفن همراه " value={modirtel} onChange={e=>setModirtel(e.target.value)}></input>
         </div>
 
         <div>
@@ -151,7 +149,7 @@ const Up = () => {
         </div>
     
         <div>
-          <input placeholder="*رمز عبور "></input>
+          <input placeholder="*رمز عبور " value={password} onChange={e=>setPassword(e.target.value)}></input>
         </div>
 
         <div>
@@ -159,7 +157,7 @@ const Up = () => {
         </div>
         <div>
           {" "}
-          <button onClick={handleInsertModir}>ثبت نام</button>
+          <button onClick={handleInsertAjans} >ثبت نام</button>
         </div>
       </div>}
     </div>

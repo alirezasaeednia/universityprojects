@@ -36,7 +36,8 @@ const NavigationBar = () => {
                         <div id="option2">ملک های من</div>
                         
             </div>
-                )}
+          )}
+          <a href="ajansamlak">آژانس املاک</a>
                 <a  href="agahi" id="agahi" >ثبت آگهی مشاورین</a>
         </div>
       </div>
