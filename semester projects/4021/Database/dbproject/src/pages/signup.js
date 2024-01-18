@@ -15,6 +15,7 @@ const Up = () => {
   const [modirtel, setModirtel] = useState('');
   const [modirname, setModirname] = useState('');
   const [modirfamily, setModirfamily] = useState('');
+  const [selectedButton1, setSelectedButton1] = useState('');
 
   const [search, setSearch] = useState(false);
 
@@ -43,7 +44,6 @@ const Up = () => {
   const toggleSearch = () => {
       setSearch(!search);
   };
-  const [selectedButton1, setSelectedButton1] = useState(null);
 
   const [isDiv1Enabled, setDiv1Enabled] = useState(false);
   const [isDiv2Enabled, setDiv2Enabled] = useState(false);
@@ -56,7 +56,7 @@ const Up = () => {
   
   const handleButtonClick2 = (buttonId) => {
    
-        setSelectedButton1(buttonId);
+    setSelectedButton1(buttonId);
       
   };
 
@@ -117,14 +117,14 @@ const Up = () => {
 
           { search&&(<div className="tedad"> 
 
-            <div><button onClick={() => handleButtonClick2(40)}
-        className={selectedButton1 === 40 ? 'selected4' : ''}>کمتر از 3</button></div>
-            <div><button onClick={() => handleButtonClick2(41)}
-        className={selectedButton1 === 41 ? 'selected4' : ''}> سه تا 5 نفر</button></div>
-            <div><button onClick={() => handleButtonClick2(42)}
-        className={selectedButton1 === 42 ? 'selected4' : ''}>پنج تا 10 نفر  </button></div>
-            <div><button onClick={() => handleButtonClick2(43)}
-        className={selectedButton1 === 43 ? 'selected4' : ''}>  بیشتر از 10 نفر</button></div>
+            <div><button onClick={() => handleButtonClick2('lower than 3')}
+        className={selectedButton1 === 'lower than 3' ? 'selected4' : ''}>کمتر از 3</button></div>
+            <div><button onClick={() => handleButtonClick2('3 to 5')}
+        className={selectedButton1 === '3 to 5' ? 'selected4' : ''}> سه تا 5 نفر</button></div>
+            <div><button onClick={() => handleButtonClick2('5 to 10')}
+        className={selectedButton1 === '5 to 10' ? 'selected4' : ''}>پنج تا 10 نفر  </button></div>
+            <div><button onClick={() => handleButtonClick2('more than 10')}
+        className={selectedButton1 === 'more than 10' ? 'selected4' : ''}>  بیشتر از 10 نفر</button></div>
 
           </div>)}
          

@@ -40,17 +40,19 @@ app.post("/api/moshaver", (req, res) => {
 });
 
 app.post("/api/ajans", (req, res) => {
-    const {city,phone,name,moshavertel,modirtel,karmandnumber,modirname,modirfamily } = req.body;
+    const {city,phone,name,moshavertel,modirtel,selectedButton1,modirname,modirfamily } = req.body;
     const query =
         "INSERT INTO ajans (city,phone,name,moshavertel,modirtel,karmandnumber,modirname,modirfamily) VALUES (?,?,?,?,?,?,?,?)";
-    db.query(query, [city, phone, name, moshavertel, modirtel, karmandnumber, modirname, modirfamily], (error, results) => {
+    db.query(query, [city, phone, name, moshavertel, modirtel, selectedButton1, modirname, modirfamily], (error, results) => {
         if (error) {
             console.error(error);
             res.status(500).json({ error: "Failed to insert moshaver" });
             console.log("failed");
         } else {
             res.status(200).json({ message: "ajans inserted successfully" });
-            console.log("ajans inserted successfully");
+            const insertedData = { city, phone, name, moshavertel, modirtel, selectedButton1, modirname, modirfamily };
+
+            console.log(insertedData);
         }
     });
 });
