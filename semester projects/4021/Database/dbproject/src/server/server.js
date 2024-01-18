@@ -39,6 +39,23 @@ app.post("/api/moshaver", (req, res) => {
   });
 });
 
+app.post("/api/moshavertel", (req,res) => {
+  const { yourajans } = req.body;
+  const query =
+    "UPDATE ajans INNER JOIN (SELECT (SELECT phone FROM moshaver LIMIT 1) AS moshavertel, (SELECT phone FROM ajans LIMIT 1) AS ajansphone) AS subquery SET ajans.moshavertel = subquery.moshavertel WHERE ajans.phone = subquery.ajansphone;";
+  db.query(query, [yourajans], (error, results) => {
+    if (error) {
+        console.error(error);
+      console.log("failed");
+    } else {
+      console.log("Moshavertel inserted successfully");
+    }
+  });
+});
+
+
+
+
 app.post("/api/ajans", (req, res) => {
     const {city,phone,name,moshavertel,modirtel,selectedButton1,modirname,modirfamily } = req.body;
     const query =
@@ -56,6 +73,9 @@ app.post("/api/ajans", (req, res) => {
         }
     });
 });
+
+
+  
 app.get("/", (re, res) => {
     return res.json("from backend side");
   });

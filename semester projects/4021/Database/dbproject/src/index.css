@@ -115,9 +115,19 @@ gap: 2rem;
 }
 
 #whole{
-  background-color: #ffffff;
-  font-weight: bold;
+  position: relative;
+  z-index: 1;
 }
+
+.background-image{
+  background-image: url('https://cdn.suwalls.com/wallpapers/games/ellie-the-last-of-us-30626-1920x1080.jpg');
+  z-index: -1;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+opacity: 30%;
+height: 100%;}
 
 #whole button{
   font-weight: bold;
