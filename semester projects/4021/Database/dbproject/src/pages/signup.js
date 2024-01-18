@@ -2,10 +2,46 @@ import React from "react";
 import NavigationBar from "../Components/NavigationBar";
 import { useState } from "react";
 import Back from "../Components/goback";
+import axios from "axios";
 
 const Up = () => {
+  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [family, setFamily] = useState("");
+  const [password, setPassword] = useState("");
+  const [city, setcity] = useState("");
+
+  const [moshavertel, setMoshavertel] = useState('');
+  const [modirtel, setModirtel] = useState('');
+  const [code, setCode] = useState('');
+  const [modirname, setModirname] = useState('');
+  const [modirfamily, setModirfamily] = useState('');
+  const [modirnumber, setModirnumber] = useState('');
 
   const [search, setSearch] = useState(false);
+
+  const handleInsert = () => {
+    axios.post("http://localhost:8001/api/moshaver", { phone, name, family, password,city })
+      .then(response => {
+        console.log(response.data.message); // Handle successful insertion
+        console.log('hi')
+      })
+      .catch(error => {
+        console.error(error); // Handle error
+        console.log('hi')
+      });
+  };
+
+  const handleInsertAjans = () => {
+    axios.post("http://localhost:8001/api/modir", { city,phone,name,moshavertel,modirtel,code,modirname,modirfamily,modirnumber})
+      .then(response => {
+        console.log(response.data.message); // Handle successful insertion
+      })
+      .catch(error => {
+        console.error(error); // Handle error
+      });
+  };
+
   const toggleSearch = () => {
       setSearch(!search);
   };
@@ -44,26 +80,26 @@ const Up = () => {
         <div>
           <a>اطلاعات مشاور</a>
           <div>
-            <input placeholder="نام  "></input>
+            <input placeholder="نام  " value={name} onChange={e => setName(e.target.value)}></input>
           </div>
           <div>
-            <input placeholder="نام خانوادگی  "></input>
+            <input placeholder="نام خانوادگی  " value={family} onChange={e => setFamily(e.target.value)}></input>
           </div>
           <div>
-            <input placeholder="شهر حوزه ففعالیت  "></input>
+            <input placeholder="شهر حوزه ففعالیت  " value={city} onChange={e => setcity(e.target.value)}></input>
           </div>
           <div>
-            <input placeholder="شماره تلفن همراه  "></input>
+            <input placeholder="شماره تلفن همراه  " value={phone} onChange={e => setPhone(e.target.value)}></input>
           </div>
           <div>
-            <input placeholder="رمز عبور  "></input>
+            <input placeholder="رمز عبور  " value={password} onChange={e => setPassword(e.target.value)}></input>
           </div>
           <div>
             <input placeholder="تکرار رمز عبور  "></input>
           </div>
           <div>
             {" "}
-            <button>ثبت نام</button>
+            <button onClick={handleInsert}>ثبت نام</button>
           </div>
         </div>
       </div>}
@@ -72,7 +108,7 @@ const Up = () => {
           <a>اطلاعات آژانس</a>
         </div>
         <div>
-          <input placeholder="*نام آژانس ( فارسی)"></input>
+          <input placeholder="*نام آژانس ( فارسی)" ></input>
         </div>
         <div>
           <input placeholder="تلفن آژانس "></input>
@@ -113,9 +149,7 @@ const Up = () => {
         <div>
           <a>تعیین رمز عبور </a>
         </div>
-        <div>
-          <input placeholder="*نام"></input>
-        </div>
+    
         <div>
           <input placeholder="*رمز عبور "></input>
         </div>
@@ -125,7 +159,7 @@ const Up = () => {
         </div>
         <div>
           {" "}
-          <button>ثبت نام</button>
+          <button onClick={handleInsertModir}>ثبت نام</button>
         </div>
       </div>}
     </div>
