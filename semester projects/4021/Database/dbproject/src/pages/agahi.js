@@ -24,8 +24,34 @@ const Agahi = () => {
   const [desc, setdesc] = useState("");
   const [title, settitle] = useState("");
   const code = '1234567';
+  const [parking, setParking] = useState(false);
+  const [lobby, setLobby] = useState(false);
+  const [anbari, setAnbari] = useState(false);
+  const [asansor, setAsansor] = useState(false);
+  const [estakhr, setEstakhr] = useState(false);
+  const [sona, setSona] = useState(false);
+  const [varzesh, setVarzesh] = useState(false);
+  const [negahban, setNegahban] = useState(false);
+  const [balcony, setBalcony] = useState(false);
+  const [tahviye, setTahviye] = useState(false);
+  const [salon, setSalon] = useState(false);
+  const [jakuzi, setJakuzi] = useState(false);
+  const [anten, setAnten] = useState(false);
+  const [darb, setDarb] = useState(false);
+  const [roof, setRoof] = useState(false);
+  const [id, setId] = useState('');
 
-
+  const [mall, setMall] = useState(0);
+  const [mosharekati, setMosharekati] = useState(0);
+  const [moavez, setMoavez] = useState(0);
+  const [ghabeltabdil, setGhabeltabdil] = useState(0);
+  const [pishfurush, setPishfurush] = useState(0);
+  const [edari, setEdari] = useState(0);
+  const [vam, setVam] = useState(0);
+  const [nosaz, setNosaz] = useState(0);
+  const [ghadr, setGhadr] = useState(0);
+  const [pasaj, setPasaj] = useState(0);
+  const [id2, setid2] = useState(0);
 
 
 
@@ -45,10 +71,66 @@ const Agahi = () => {
       console.log('hi')
     });
     handleInsert();
+    handleInsert2();
   };
 
   const handleInsert = () => {
-    axios.post("http://localhost:8001/api/agahi", { code,desc,title,bedno,nokarbari,metraj,gheymatejare,gheymatrahn,norahn,mahale,city,selectedButtons })
+    const gg = new Array(selectedButtons.length+1);
+    selectedButtons.forEach(button => {
+      switch (button) {
+        case 'parking':
+          setParking(1);
+          break;
+        case 'lobby':
+          setLobby(1);
+          break;
+        case 'anbari':
+          setAnbari(1);
+          break;
+        case 'asansor':
+          setAsansor(1);
+          break;
+        case 'estakhr':
+          setEstakhr(1);
+          break;
+        case 'sona':
+          setSona(1);
+          break;
+        case 'varzesh':
+          setVarzesh(1);
+          break;
+        case 'negahban':
+          setNegahban(1);
+          break;
+        case 'balcony':
+          setBalcony(1);
+          break;
+        case 'tahviye':
+          setTahviye(1);
+          break;
+        case 'salon':
+          setSalon(1);
+          break;
+        case 'jakuzi':
+          setJakuzi(1);
+          break;
+        case 'anten':
+          setAnten(1);
+          break;
+        case 'darb':
+          setDarb(1);
+          break;
+        case 'roof':
+          setRoof(1);
+          break;
+        default:
+          break;
+      }
+    });
+    const random = Math.random();
+    setId(random);
+    
+    axios.post("http://localhost:8001/api/emkanat", {parking, lobby, anbari, asansor, estakhr, sona, varzesh, negahban, balcony, tahviye, salon, jakuzi, anten, darb, roof,id })
       .then(response => {
         console.log(response.data.message); // Handle successful insertion
         console.log('hi')
@@ -57,6 +139,63 @@ const Agahi = () => {
         console.error(error); // Handle error
         console.log('hi')
       });
+    
+    
+  };
+
+  const handleInsert2 = () => {
+    const gg = new Array(selectedButtons.length+1);
+    selectedButtons.forEach(button => {
+      switch (button) {
+        case 'mosharekati':
+          setMosharekati(1);
+          break;
+        case 'moavez':
+          setMoavez(1);
+          break;
+        case 'ghabeltabdil':
+          setGhabeltabdil(1);
+          break;
+        case 'pishfurush':
+          setPishfurush(1);
+          break;
+        case 'edari':
+          setEdari(1);
+          break;
+        case 'vam':
+          setVam(1);
+          break;
+        case 'nosaz':
+          setNosaz(1);
+          break;
+        case 'ghadr':
+          setGhadr(1);
+          break;
+        case 'pasaj':
+          setPasaj(1);
+          break;
+        case 'mall':
+          setMall(1);
+          break;
+        
+        default:
+          break;
+      }
+    });
+    const random = Math.random();
+    setid2(random);
+    
+    axios.post("http://localhost:8001/api/sharayet", {id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall })
+      .then(response => {
+        console.log(response.data.message); // Handle successful insertion
+        console.log('hi')
+      })
+      .catch(error => {
+        console.error(error); // Handle error
+        console.log('hi')
+      });
+    
+    
   };
   const handlePhotoUpload = (event) => {
     const uploadedPhotos = Array.from(event.target.files);
@@ -73,6 +212,7 @@ const Agahi = () => {
     } else {
       setSelectedButtons([...selectedButtons, button]);
     }
+    console.log(selectedButtons);
   };
 
   const handleButtonClick2 = (buttonId) => {
@@ -248,92 +388,92 @@ const Agahi = () => {
         <div id="mahali6">
           <a>امکانات </a>
           <button
-            onClick={() => handleButtonClick("Button 1")}
-            className={selectedButtons.includes("Button 1") ? "selected" : ""}
+            onClick={() => handleButtonClick("parking")}
+            className={selectedButtons.includes("parking") ? "selected" : ""}
           >
             پارکینگ
           </button>
           <button
-            onClick={() => handleButtonClick("Button 2")}
-            className={selectedButtons.includes("Button 2") ? "selected" : ""}
+            onClick={() => handleButtonClick("lobby")}
+            className={selectedButtons.includes("lobby") ? "selected" : ""}
           >
             لابی
           </button>
           <button
-            onClick={() => handleButtonClick("Button 3")}
-            className={selectedButtons.includes("Button 3") ? "selected" : ""}
+            onClick={() => handleButtonClick("anbari")}
+            className={selectedButtons.includes("anbari") ? "selected" : ""}
           >
             انباری
           </button>
           <button
-            onClick={() => handleButtonClick("Button 4")}
-            className={selectedButtons.includes("Button 4") ? "selected" : ""}
+            onClick={() => handleButtonClick("asansor")}
+            className={selectedButtons.includes("asansor") ? "selected" : ""}
           >
             آسانسور
           </button>
           <button
-            onClick={() => handleButtonClick("Button 5")}
-            className={selectedButtons.includes("Button 5") ? "selected" : ""}
+            onClick={() => handleButtonClick("estakhr")}
+            className={selectedButtons.includes("estakhr") ? "selected" : ""}
           >
             استخر
           </button>
           <button
-            onClick={() => handleButtonClick("Button 6")}
-            className={selectedButtons.includes("Button 6") ? "selected" : ""}
+            onClick={() => handleButtonClick("sona")}
+            className={selectedButtons.includes("sona") ? "selected" : ""}
           >
             سونا
           </button>
           <button
-            onClick={() => handleButtonClick("Button 7")}
-            className={selectedButtons.includes("Button 7") ? "selected" : ""}
+            onClick={() => handleButtonClick(" varzesh")}
+            className={selectedButtons.includes(" varzesh") ? "selected" : ""}
           >
             سالن ورزش
           </button>
           <button
-            onClick={() => handleButtonClick("Button 8")}
-            className={selectedButtons.includes("Button 8") ? "selected" : ""}
+            onClick={() => handleButtonClick("negahban")}
+            className={selectedButtons.includes("negahban") ? "selected" : ""}
           >
             نگهبان
           </button>
           <button
-            onClick={() => handleButtonClick("Button 9")}
-            className={selectedButtons.includes("Button 9") ? "selected" : ""}
+            onClick={() => handleButtonClick("balcony")}
+            className={selectedButtons.includes("balcony") ? "selected" : ""}
           >
             بالکن
           </button>
           <button
-            onClick={() => handleButtonClick("Button 10")}
-            className={selectedButtons.includes("Button 10") ? "selected" : ""}
+            onClick={() => handleButtonClick("tahviye")}
+            className={selectedButtons.includes("tahviye") ? "selected" : ""}
           >
             تهویه مطبوع
           </button>
           <button
-            onClick={() => handleButtonClick("Button 11")}
-            className={selectedButtons.includes("Button 11") ? "selected" : ""}
+            onClick={() => handleButtonClick("salon")}
+            className={selectedButtons.includes("salon") ? "selected" : ""}
           >
             سالن اجتماعات
           </button>
           <button
-            onClick={() => handleButtonClick("Button 12")}
-            className={selectedButtons.includes("Button 12") ? "selected" : ""}
+            onClick={() => handleButtonClick("jakuzi")}
+            className={selectedButtons.includes("jakuzi") ? "selected" : ""}
           >
             جکوزی
           </button>
           <button
-            onClick={() => handleButtonClick("Button 13")}
-            className={selectedButtons.includes("Button 13") ? "selected" : ""}
+            onClick={() => handleButtonClick("anten")}
+            className={selectedButtons.includes("anten") ? "selected" : ""}
           >
             آنتن مرکزی
           </button>
           <button
-            onClick={() => handleButtonClick("Button 14")}
-            className={selectedButtons.includes("Button 14") ? "selected" : ""}
+            onClick={() => handleButtonClick("darb")}
+            className={selectedButtons.includes("darb") ? "selected" : ""}
           >
             درب ریموت
           </button>
           <button
-            onClick={() => handleButtonClick("Button 15")}
-            className={selectedButtons.includes("Button 15") ? "selected" : ""}
+            onClick={() => handleButtonClick("roof")}
+            className={selectedButtons.includes("roof") ? "selected" : ""}
           >
             روف گاردن
           </button>
@@ -341,62 +481,62 @@ const Agahi = () => {
         <div id="mahali7">
           <a>شرایط</a>
           <button
-            onClick={() => handleButtonClick("Button 16")}
-            className={selectedButtons.includes("Button 16") ? "selected2" : ""}
+            onClick={() => handleButtonClick("mosharekati")}
+            className={selectedButtons.includes("mosharekati") ? "selected2" : ""}
           >
             مشارکتی
           </button>
           <button
-            onClick={() => handleButtonClick("Button 17")}
-            className={selectedButtons.includes("Button 17") ? "selected2" : ""}
+            onClick={() => handleButtonClick("moavez")}
+            className={selectedButtons.includes("moavez") ? "selected2" : ""}
           >
             معاوضه
           </button>
           <button
-            onClick={() => handleButtonClick("Button 18")}
-            className={selectedButtons.includes("Button 18") ? "selected2" : ""}
+            onClick={() => handleButtonClick("ghabeltabdil")}
+            className={selectedButtons.includes("ghabeltabdil") ? "selected2" : ""}
           >
             قابل تبدیل
           </button>
           <button
-            onClick={() => handleButtonClick("Button 19")}
-            className={selectedButtons.includes("Button 19") ? "selected2" : ""}
+            onClick={() => handleButtonClick("pishfurush")}
+            className={selectedButtons.includes("pishfurush") ? "selected2" : ""}
           >
             پیش فروش
           </button>
           <button
-            onClick={() => handleButtonClick("Button 20")}
-            className={selectedButtons.includes("Button 20") ? "selected2" : ""}
+            onClick={() => handleButtonClick("edari")}
+            className={selectedButtons.includes("edari") ? "selected2" : ""}
           >
             موقعیت اداری
           </button>
           <button
-            onClick={() => handleButtonClick("Button 21")}
-            className={selectedButtons.includes("Button 21") ? "selected2" : ""}
+            onClick={() => handleButtonClick("vam")}
+            className={selectedButtons.includes("vam") ? "selected2" : ""}
           >
             وام دار
           </button>
           <button
-            onClick={() => handleButtonClick("Button 22")}
-            className={selectedButtons.includes("Button 22") ? "selected2" : ""}
+            onClick={() => handleButtonClick("nosaz")}
+            className={selectedButtons.includes("nosaz") ? "selected2" : ""}
           >
             نوساز
           </button>
           <button
-            onClick={() => handleButtonClick("Button 23")}
-            className={selectedButtons.includes("Button 23") ? "selected2" : ""}
+            onClick={() => handleButtonClick("ghadr")}
+            className={selectedButtons.includes("ghadr") ? "selected2" : ""}
           >
             قدر السهم
           </button>
           <button
-            onClick={() => handleButtonClick("Button 24")}
-            className={selectedButtons.includes("Button 24") ? "selected2" : ""}
+            onClick={() => handleButtonClick("pasaj")}
+            className={selectedButtons.includes("pasaj") ? "selected2" : ""}
           >
             پاساژ
           </button>
           <button
-            onClick={() => handleButtonClick("Button 25")}
-            className={selectedButtons.includes("Button 25") ? "selected2" : ""}
+            onClick={() => handleButtonClick("mall")}
+            className={selectedButtons.includes("mall") ? "selected2" : ""}
           >
             مال
           </button>

@@ -1,9 +1,11 @@
+
 const express = require("express");
 const mysql = require("mysql");
 const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors());
+
 
 
 const db = mysql.createConnection({
@@ -44,8 +46,7 @@ app.post("/api/moshavertel", (req,res) => {
   const query =
 
     "UPDATE ajans INNER JOIN (SELECT (SELECT phone FROM moshaver LIMIT 1) AS moshavertel, (SELECT phone FROM ajans LIMIT 1) AS ajansphone) AS subquery SET ajans.moshavertel = subquery.moshavertel WHERE ajans.phone = subquery.ajansphone;";
-  "SET SQL_SAFE_UPDATES = 0;";
-  "update agahi set ajansid=(SELECT phone from ajans where phone=last_insert_id(phone) limit 1) ;";
+
   db.query(query, [yourajans], (error, results) => {
     if (error) {
         console.error(error);
@@ -79,13 +80,16 @@ app.post("/api/ajans", (req, res) => {
 });
 
 
-app.post("/api/agahi", (req, res) => {
-  const {code,desc,title,bedno,nokarbari,metraj,gheymatejare,gheymatrahn,norahn,mahale,shahr,selectedButtons } = req.body;
+
+app.post("/api/emkanat", (req, res) => {
+  const { parking, lobby, anbari, asansor, estakhr, sona, varzesh, negahban, balcony, tahviye, salon, jakuzi, anten, darb, roof,id } = req.body;
+
+
   const query =
-    "INSERT INTO moshaver (phone, name, family,password,city) VALUES (?,?, ?,?,?)";
-  db.query(query, [phone, name, family, password, city], (error, results) => {
+    "INSERT INTO emkanat  (parking, lobby, anbari, asansor, estakhr, sona, varzesh, negahban, balcony, tahviye, salon, jakuzi, anten, darb, roof,id)  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+  db.query(query, [parking, lobby, anbari, asansor, estakhr, sona, varzesh, negahban, balcony, tahviye, salon, jakuzi, anten, darb, roof, id], (error, results) => {
     if (error) {
-        console.error(error);
+      console.error(error);
       res.status(500).json({ error: "Failed to insert moshaver" });
       console.log("failed");
     } else {
@@ -94,6 +98,26 @@ app.post("/api/agahi", (req, res) => {
     }
   });
 });
+
+app.post("/api/sharayet", (req, res) => {
+  const { id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall  } = req.body;
+
+
+  const query =
+    "INSERT INTO sharayet  (id, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall )  VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+  db.query(query, [id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall ], (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: "Failed to insert moshaver" });
+      console.log("failed");
+    } else {
+      res.status(200).json({ message: "Moshaver inserted successfully" });
+      console.log("Moshaver inserted successfully");
+    }
+  });
+});
+
+
 
 
   
