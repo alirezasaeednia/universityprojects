@@ -21,9 +21,9 @@ const Agahi = () => {
   const [metraj, setmetraj] = useState("");
   const [nokarbari, setnokarbari] = useState("");
   const [bedno, setbedno] = useState("");
-  const [desc, setdesc] = useState("");
+  const [descp, setdescp] = useState("");
   const [title, settitle] = useState("");
-  const code = '1234567';
+  const code = Math.floor(1000000 + Math.random() * 9000000); 
   const [parking, setParking] = useState(false);
   const [lobby, setLobby] = useState(false);
   const [anbari, setAnbari] = useState(false);
@@ -72,6 +72,7 @@ const Agahi = () => {
     });
     handleInsert();
     handleInsert2();
+    handleAgahi();
   };
 
   const handleInsert = () => {
@@ -127,7 +128,7 @@ const Agahi = () => {
           break;
       }
     });
-    const random = Math.random();
+    const random = Math.floor(Math.random() * 100) + 1
     setId(random);
     
     axios.post("http://localhost:8001/api/emkanat", {parking, lobby, anbari, asansor, estakhr, sona, varzesh, negahban, balcony, tahviye, salon, jakuzi, anten, darb, roof,id })
@@ -182,10 +183,25 @@ const Agahi = () => {
           break;
       }
     });
-    const random = Math.random();
+    const random = Math.floor(Math.random() * 100) + 1
     setid2(random);
     
     axios.post("http://localhost:8001/api/sharayet", {id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall })
+      .then(response => {
+        console.log(response.data.message); // Handle successful insertion
+        console.log('hi')
+      })
+      .catch(error => {
+        console.error(error); // Handle error
+        console.log('hi')
+      });
+    
+    
+  };
+
+  const handleAgahi = () => {
+    
+    axios.post("http://localhost:8001/api/agahi", { code, descp, title, bedno, nokarbari, metraj, gheymatejare, gheymatrahn, norahn, mahale, city })
       .then(response => {
         console.log(response.data.message); // Handle successful insertion
         console.log('hi')
@@ -574,7 +590,7 @@ const Agahi = () => {
 
         <div id="mahali10">
           <a>توضیحات</a>
-          <input placeholder="اطلاعات بیشتر را وارد کنید" value={desc} onChange={e=>{setdesc(e.target.value)}}></input>
+          <input placeholder="اطلاعات بیشتر را وارد کنید" value={descp} onChange={e=>{setdescp(e.target.value)}}></input>
         </div>
 
         <button onClick={getPhoneValue} >تایید</button>

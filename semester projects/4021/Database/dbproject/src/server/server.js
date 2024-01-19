@@ -101,21 +101,59 @@ app.post("/api/emkanat", (req, res) => {
 
 app.post("/api/sharayet", (req, res) => {
   const { id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall  } = req.body;
+  const query1 = "INSERT INTO sharayet (id, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall) VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+  const query2 = "SET SQL_SAFE_UPDATES = 0";
+  const query3 = "UPDATE agahi SET ajansid = (SELECT phone FROM ajans WHERE phone = LAST_INSERT_ID(phone) LIMIT 1)";
+  const query4 = "UPDATE agahi SET emkanatid = (SELECT id FROM emkanat WHERE id = LAST_INSERT_ID(id) LIMIT 1)";
+  const query5 = "UPDATE agahi SET sharayetid = (SELECT id FROM sharayet WHERE id = LAST_INSERT_ID(id) LIMIT 1)";
+  
+  db.query(query1, [id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall], (error, results) => {
+    if (error) {
+      console.error(error);
+      res.status(500).json({ error: "Failed to insert moshaver" });
+      console.log("failed");
+    } else {
+      db.query(query2, (error, results) => {
+        if (error) {
+          console.error(error);
+          res.status(500).json({ error: "Failed to set SQL_SAFE_UPDATES" });
+        } else {
+          db.query(query3, (error, results) => {
+          });
+          db.query(query4, (error, results) => {
+          });
+          db.query(query5, (error, results) => {
+          });
+          res.status(200).json({ message: "Moshaver inserted successfully" });
+          console.log("agahi inserted successfully");
+        }
+      });
+    }
+  });
+
+
+});
+
+app.post("/api/agahi", (req, res) => {
+  const {code, descp, title, bedno, nokarbari, metraj, gheymatejare, gheymatrahn, norahn, mahale, city  } = req.body;
 
 
   const query =
-    "INSERT INTO sharayet  (id, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall )  VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-  db.query(query, [id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall ], (error, results) => {
+    "INSERT INTO agahi  (code, descp, title, bedno, nokarbari, metraj, gheymatejare, gheymatrahn, norahn, mahale, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)";
+  db.query(query, [code, descp, title, bedno, nokarbari, metraj, gheymatejare, gheymatrahn, norahn, mahale, city  ], (error, results) => {
     if (error) {
       console.error(error);
       res.status(500).json({ error: "Failed to insert moshaver" });
       console.log("failed");
     } else {
       res.status(200).json({ message: "Moshaver inserted successfully" });
-      console.log("Moshaver inserted successfully");
+      console.log("agahi inserted successfully");
+      
+   
     }
   });
 });
+
 
 
 
