@@ -13,44 +13,44 @@ const Agahi = () => {
   const [selectedButton2, setSelectedButton2] = useState(null);
   const [selectedButton3, setSelectedButton3] = useState(null);
   const [yourajans, setyourajans] = useState('');
-  const [city, setcity] = useState("");
-  const [mahale, setmahale] = useState("");
-  const [gheymatrahn, setgheymatrahn] = useState("");
+  const [city, setcity] = useState('');
+  const [mahale, setmahale] = useState('');
+  const [gheymatrahn, setgheymatrahn] = useState('');
   const [norahn, setnorahn] = useState(1);
-  const [gheymatejare, setgheymatejare] = useState("");
-  const [metraj, setmetraj] = useState("");
-  const [nokarbari, setnokarbari] = useState("");
-  const [bedno, setbedno] = useState("");
-  const [descp, setdescp] = useState("");
-  const [title, settitle] = useState("");
+  const [gheymatejare, setgheymatejare] = useState('0');
+  const [metraj, setmetraj] = useState('0');
+  const [nokarbari, setnokarbari] = useState('0');
+  const [bedno, setbedno] = useState('0');
+  const [descp, setdescp] = useState('');
+  const [title, settitle] = useState('');
   const code = Math.floor(1000000 + Math.random() * 9000000); 
-  const [parking, setParking] = useState(false);
-  const [lobby, setLobby] = useState(false);
-  const [anbari, setAnbari] = useState(false);
-  const [asansor, setAsansor] = useState(false);
-  const [estakhr, setEstakhr] = useState(false);
-  const [sona, setSona] = useState(false);
-  const [varzesh, setVarzesh] = useState(false);
-  const [negahban, setNegahban] = useState(false);
-  const [balcony, setBalcony] = useState(false);
-  const [tahviye, setTahviye] = useState(false);
-  const [salon, setSalon] = useState(false);
-  const [jakuzi, setJakuzi] = useState(false);
-  const [anten, setAnten] = useState(false);
-  const [darb, setDarb] = useState(false);
-  const [roof, setRoof] = useState(false);
-  const [id, setId] = useState('');
+  const [parking, setParking] = useState('0');
+  const [lobby, setLobby] = useState('0');
+  const [anbari, setAnbari] = useState('0');
+  const [asansor, setAsansor] = useState('0');
+  const [estakhr, setEstakhr] = useState('0');
+  const [sona, setSona] = useState('0');
+  const [varzesh, setVarzesh] = useState('0');
+  const [negahban, setNegahban] = useState('0');
+  const [balcony, setBalcony] = useState('0');
+  const [tahviye, setTahviye] = useState('0');
+  const [salon, setSalon] = useState('0');
+  const [jakuzi, setJakuzi] = useState('0');
+  const [anten, setAnten] = useState('0');
+  const [darb, setDarb] = useState('0');
+  const [roof, setRoof] = useState('0');
+  const [id, setId] = useState(0);
 
-  const [mall, setMall] = useState(0);
-  const [mosharekati, setMosharekati] = useState(0);
-  const [moavez, setMoavez] = useState(0);
-  const [ghabeltabdil, setGhabeltabdil] = useState(0);
-  const [pishfurush, setPishfurush] = useState(0);
-  const [edari, setEdari] = useState(0);
-  const [vam, setVam] = useState(0);
-  const [nosaz, setNosaz] = useState(0);
-  const [ghadr, setGhadr] = useState(0);
-  const [pasaj, setPasaj] = useState(0);
+  const [mall, setMall] = useState('0');
+  const [mosharekati, setMosharekati] = useState('0');
+  const [moavez, setMoavez] = useState('0');
+  const [ghabeltabdil, setGhabeltabdil] = useState('0');
+  const [pishfurush, setPishfurush] = useState('0');
+  const [edari, setEdari] = useState('0');
+  const [vam, setVam] = useState('0');
+  const [nosaz, setNosaz] = useState('0');
+  const [ghadr, setGhadr] = useState('0');;
+  const [pasaj, setPasaj] = useState('0');
   const [id2, setid2] = useState(0);
 
 
@@ -59,8 +59,11 @@ const Agahi = () => {
   const toggleSearch = () => {
     setSearch(!search);
   };
-
+ 
   const getPhoneValue = () => {
+    handleInsert();
+    handleInsert2();
+    handleAgahi();
     axios.post("http://localhost:8001/api/moshavertel", { yourajans })
     .then(response => {
       console.log(response.data.message); // Handle successful insertion
@@ -70,119 +73,34 @@ const Agahi = () => {
       console.error(error); // Handle error
       console.log('hi')
     });
-    handleInsert();
-    handleInsert2();
-    handleAgahi();
-  };
+  
 
+  };
+ 
   const handleInsert = () => {
-    const gg = new Array(selectedButtons.length+1);
-    selectedButtons.forEach(button => {
-      switch (button) {
-        case 'parking':
-          setParking(1);
-          break;
-        case 'lobby':
-          setLobby(1);
-          break;
-        case 'anbari':
-          setAnbari(1);
-          break;
-        case 'asansor':
-          setAsansor(1);
-          break;
-        case 'estakhr':
-          setEstakhr(1);
-          break;
-        case 'sona':
-          setSona(1);
-          break;
-        case 'varzesh':
-          setVarzesh(1);
-          break;
-        case 'negahban':
-          setNegahban(1);
-          break;
-        case 'balcony':
-          setBalcony(1);
-          break;
-        case 'tahviye':
-          setTahviye(1);
-          break;
-        case 'salon':
-          setSalon(1);
-          break;
-        case 'jakuzi':
-          setJakuzi(1);
-          break;
-        case 'anten':
-          setAnten(1);
-          break;
-        case 'darb':
-          setDarb(1);
-          break;
-        case 'roof':
-          setRoof(1);
-          break;
-        default:
-          break;
-      }
-    });
+  
+    console.log(selectedButtons)
+ 
     const random = Math.floor(Math.random() * 100) + 1
     setId(random);
     
     axios.post("http://localhost:8001/api/emkanat", {parking, lobby, anbari, asansor, estakhr, sona, varzesh, negahban, balcony, tahviye, salon, jakuzi, anten, darb, roof,id })
       .then(response => {
         console.log(response.data.message); // Handle successful insertion
-        console.log('hi')
+        console.log (sona);
+        console.log('shod')
       })
       .catch(error => {
         console.error(error); // Handle error
-        console.log('hi')
+        console.log('nashod')
       });
     
-    
+ 
   };
 
   const handleInsert2 = () => {
     const gg = new Array(selectedButtons.length+1);
-    selectedButtons.forEach(button => {
-      switch (button) {
-        case 'mosharekati':
-          setMosharekati(1);
-          break;
-        case 'moavez':
-          setMoavez(1);
-          break;
-        case 'ghabeltabdil':
-          setGhabeltabdil(1);
-          break;
-        case 'pishfurush':
-          setPishfurush(1);
-          break;
-        case 'edari':
-          setEdari(1);
-          break;
-        case 'vam':
-          setVam(1);
-          break;
-        case 'nosaz':
-          setNosaz(1);
-          break;
-        case 'ghadr':
-          setGhadr(1);
-          break;
-        case 'pasaj':
-          setPasaj(1);
-          break;
-        case 'mall':
-          setMall(1);
-          break;
-        
-        default:
-          break;
-      }
-    });
+  
     const random = Math.floor(Math.random() * 100) + 1
     setid2(random);
     
@@ -219,17 +137,211 @@ const Agahi = () => {
   };
 
   const [selectedButtons, setSelectedButtons] = useState([]);
+  useEffect(() => {
+    console.log(selectedButtons.length, "mow",selectedButtons);
+    for (let i = 0; i < selectedButtons.length; i++) {
+      let button = selectedButtons[i];
+      console.log('umadi');
+      switch (button) {
+        case 'parking':
+          setParking('1');
+          break;
+        case 'lobby':
+          setLobby('1');
 
+          break;
+        case 'anbari':
+          setAnbari('1');
+          break;
+        case 'asansor':
+          setAsansor('1');
+          break;
+        case 'estakhr':
+          setEstakhr('1');
+          break;
+        case 'sona':
+          setSona('1')
+          break;
+        case 'varzesh':
+          setVarzesh('1');
+          break;
+        case 'negahban':
+          setNegahban('1');
+          break;
+        case 'balcony':
+          setBalcony('1');
+          break;
+        case 'tahviye':
+          setTahviye('1');
+          break;
+        case 'salon':
+          setSalon('1');
+          break;
+        case 'jakuzi':
+          setJakuzi('1');
+          break;
+        case 'anten':
+          setAnten('1');
+          break;
+        case 'darb':
+          setDarb('1');
+          break;
+        case 'roof':
+          setRoof('1');
+          break;
+        default:
+          break;
+      }
+    } for (let i = 0; i < selectedButtons.length; i++) {
+      let button = selectedButtons[i];
+      switch (button) {
+        case 'mosharekati':
+          setMosharekati('1');
+          break;
+        case 'moavez':
+          setMoavez('1');
+          break;
+        case 'ghabeltabdil':
+          setGhabeltabdil('1');
+          break;
+        case 'pishfurush':
+          setPishfurush('1');
+          break;
+        case 'edari':
+          setEdari('1');
+          break;
+        case 'vam':
+          setVam('1');
+          break;
+        case 'nosaz':
+          setNosaz('1');
+          break;
+        case 'ghadr':
+          setGhadr('1');
+          break;
+        case 'pasaj':
+          setPasaj('1');
+          break;
+        case 'mall':
+          setMall('1');
+          break;
+        
+        default:
+          break;
+      }
+    };
+  }, [selectedButtons]);
+  
+  useEffect(() => {
+    console.log( [parking, lobby, anbari, asansor, estakhr, sona, varzesh, negahban, balcony, tahviye, salon, jakuzi, anten, darb, roof,id]);
+    console.log([id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall ])
+ 
+  }, [parking, lobby, anbari, asansor, estakhr, sona, varzesh, negahban, balcony, tahviye, salon, jakuzi, anten, darb, roof,id],[id2, mosharekati, moavez, ghabeltabdil, pishfurush, edari, vam, nosaz, ghadr, pasaj, mall ]);
+
+
+
+    
   const handleButtonClick = (button) => {
     if (selectedButtons.includes(button)) {
       setSelectedButtons(
+        
         selectedButtons.filter((selectedButton) => selectedButton !== button)
-      );
+      );        switch (button) {
+        case 'parking':
+          setParking('0');
+          break;
+        case 'lobby':
+          setLobby('0');
+
+          break;
+        case 'anbari':
+          setAnbari('0');
+          break;
+        case 'asansor':
+          setAsansor('0');
+          break;
+        case 'estakhr':
+          setEstakhr('0');
+          break;
+        case 'sona':
+          setSona('0')
+          break;
+        case 'varzesh':
+          setVarzesh('0');
+          break;
+        case 'negahban':
+          setNegahban('0');
+          break;
+        case 'balcony':
+          setBalcony('0');
+          break;
+        case 'tahviye':
+          setTahviye('0');
+          break;
+        case 'salon':
+          setSalon('0');
+          break;
+        case 'jakuzi':
+          setJakuzi('0');
+          break;
+        case 'anten':
+          setAnten('0');
+          break;
+        case 'darb':
+          setDarb('0');
+          break;
+        case 'roof':
+          setRoof('0');
+          break;
+        default:
+          break;
+      }  
+        switch (button) {
+          case 'mosharekati':
+            setMosharekati('0');
+            break;
+          case 'moavez':
+            setMoavez('0');
+            break;
+          case 'ghabeltabdil':
+            setGhabeltabdil('0');
+            break;
+          case 'pishfurush':
+            setPishfurush('0');
+            break;
+          case 'edari':
+            setEdari('0');
+            break;
+          case 'vam':
+            setVam('0');
+            break;
+          case 'nosaz':
+            setNosaz('0');
+            break;
+          case 'ghadr':
+            setGhadr('0');
+            break;
+          case 'pasaj':
+            setPasaj('0');
+            break;
+          case 'mall':
+            setMall('0');
+            break;
+          
+          default:
+            break;
+        
+      };  
     } else {
-      setSelectedButtons([...selectedButtons, button]);
+  setSelectedButtons([...selectedButtons, button]);
     }
-    console.log(selectedButtons);
-  };
+    console.log('injai');
+    console.log(selectedButtons.length ,"length");
+    
+
+   
+
+};
 
   const handleButtonClick2 = (buttonId) => {
     if (buttonId >= 1 && buttonId <= 4) {
@@ -440,8 +552,8 @@ const Agahi = () => {
             سونا
           </button>
           <button
-            onClick={() => handleButtonClick(" varzesh")}
-            className={selectedButtons.includes(" varzesh") ? "selected" : ""}
+            onClick={() => handleButtonClick("varzesh")}
+            className={selectedButtons.includes("varzesh") ? "selected" : ""}
           >
             سالن ورزش
           </button>
@@ -600,5 +712,7 @@ const Agahi = () => {
 
   );
 };
+
+
 
 export default Agahi;

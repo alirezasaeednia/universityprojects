@@ -3,6 +3,7 @@ import NavigationBar from "../Components/NavigationBar";
 import Back from "../Components/goback";
 import { useState } from "react";
 import { MultiSelect } from "react-multi-select-component";
+import axios from "axios";
 
 const options = [
   { label: "مسکونی", value: "اداری تجاری" },
@@ -73,12 +74,29 @@ const Result = () => {
 
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value);
+    handleSearch();
   };
+
+  
+  const handleSearch = (ww) => {
+    axios.post("http://localhost:8001/api/results", {  })
+    .then(response => {
+      console.log(response.data.message); // Handle successful insertion
+      console.log('hi')
+    })
+    .catch(error => {
+      console.error(error); // Handle error
+      console.log('hi')
+    });
+
+  };
+
 
   const [sliderValue2, setSliderValue2] = useState(50); // Initial value of the slider
 
   const handleSliderChange2 = (event) => {
     setSliderValue2(event.target.value);
+    handleSearch();
   };
 
   const [sliderValue3, setSliderValue3] = useState(50); // Initial value of the slider
@@ -139,7 +157,7 @@ const Result = () => {
               <input type="range"   value={sliderValue2}
         onChange={handleSliderChange2} min={0} max={300}/>
             </div>
-            <p>قیمت بزرگتر از: {sliderValue2} تومان </p>          </div>
+            <p>متراژ بزرگتر از: {sliderValue2} متر </p>          </div>
           <div id="تعداد خواب">
             <a>تعداد خواب</a>
             <div>
