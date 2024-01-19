@@ -16,14 +16,14 @@ const Agahi = () => {
   const [city, setcity] = useState("");
   const [mahale, setmahale] = useState("");
   const [gheymatrahn, setgheymatrahn] = useState("");
-  const [norahn, setnorahn] = useState("");
+  const [norahn, setnorahn] = useState(1);
   const [gheymatejare, setgheymatejare] = useState("");
   const [metraj, setmetraj] = useState("");
   const [nokarbari, setnokarbari] = useState("");
   const [bedno, setbedno] = useState("");
   const [desc, setdesc] = useState("");
   const [title, settitle] = useState("");
-
+  const code = '1234567';
 
 
 
@@ -44,8 +44,20 @@ const Agahi = () => {
       console.error(error); // Handle error
       console.log('hi')
     });
+    handleInsert();
   };
 
+  const handleInsert = () => {
+    axios.post("http://localhost:8001/api/agahi", { code,desc,title,bedno,nokarbari,metraj,gheymatejare,gheymatrahn,norahn,mahale,city,selectedButtons })
+      .then(response => {
+        console.log(response.data.message); // Handle successful insertion
+        console.log('hi')
+      })
+      .catch(error => {
+        console.error(error); // Handle error
+        console.log('hi')
+      });
+  };
   const handlePhotoUpload = (event) => {
     const uploadedPhotos = Array.from(event.target.files);
     setPhotos([...photos, ...uploadedPhotos]);
@@ -66,13 +78,50 @@ const Agahi = () => {
   const handleButtonClick2 = (buttonId) => {
     if (buttonId >= 1 && buttonId <= 4) {
       setSelectedButton1(buttonId);
+      if (buttonId == 1) {
+        setnokarbari('maskooni');
+      }
+      if (buttonId == 2) {
+        setnokarbari('tejari');
+      }
+      if (buttonId == 3) {
+        setnokarbari('edari');
+      }
+      if (buttonId == 4) {
+        setnokarbari('sanati');
+      }
     }
 
     if (buttonId >= 5 && buttonId <= 10) {
       setSelectedButton2(buttonId);
+      if (buttonId == 5) {
+        setbedno('tak khab');
+      }
+      if (buttonId == 6) {
+        setbedno('do khab');
+      }
+      if (buttonId == 7) {
+        setbedno('se khab');
+      }
+      if (buttonId == 8) {
+        setbedno('4 khab');
+      }
+      if (buttonId == 9) {
+        setbedno('5 khab');
+      }
+
+      if (buttonId == 10) {
+        setbedno('6 khab');
+      }
     }
     if (buttonId >= 11 && buttonId <= 12) {
       setSelectedButton3(buttonId);
+      if (buttonId == 11) {
+        setnorahn('ejare');
+      }
+      if (buttonId == 12) {
+        setnorahn('tavafoghi');
+      }
     }
   };
 
@@ -96,17 +145,17 @@ const Agahi = () => {
         </div>
         <div id="mahali">
           <a>محله</a>
-          <input placeholder=">شهر مورد نظر خود را وارد کنید"></input>
+          <input placeholder=">شهر مورد نظر خود را وارد کنید" value={city} onChange={e=>{setcity(e.target.value)}}></input>
 
           <a>شهر</a>
-          <input placeholder=">محله مورد نظر خود را وارد کنید"></input>
+          <input placeholder=">محله مورد نظر خود را وارد کنید" value={mahale} onChange={e=>{setmahale(e.target.value)}}></input>
         </div>
         <div id="mahali2">
           <a>رهن</a>
-          <input placeholder="مبلغ رهن را به تومان وارد کنید" />
+          <input placeholder="مبلغ رهن را به تومان وارد کنید"  value={gheymatrahn} onChange={e=>{setgheymatrahn(e.target.value)}} />
           <button
             onClick={() => handleButtonClick2(11)}
-            className={selectedButton3 === 11 ? "selected4" : ""}
+            className={selectedButton3 === 11 ? "selected4" : "" } value={norahn} onChange={e=>{setnorahn(!norahn)}}
           >
             رهن کامل
           </button>
@@ -120,12 +169,12 @@ const Agahi = () => {
 
         <div id="mahali3">
           <a>اجاره</a>
-          <input placeholder="اجاره به تومان را وارد کنید" />
+          <input placeholder="اجاره به تومان را وارد کنید"  value={gheymatejare} onChange={e=>{setgheymatejare(e.target.value)}}/>
         </div>
 
         <div id="mahali3">
           <a>متراژ</a>
-          <input placeholder="متراژ   را وارد کنید" />
+          <input placeholder="متراژ   را وارد کنید" value={metraj} onChange={e=>{setmetraj(e.target.value)}}/>
         </div>
 
         <div id="mahali4">
@@ -380,15 +429,15 @@ const Agahi = () => {
 
         <div id="mahali9">
           <a>عنوان</a>
-          <input placeholder="عنوان"></input>
+          <input placeholder="عنوان" value={title} onChange={e=>{settitle(e.target.value)}}></input>
         </div>
 
         <div id="mahali10">
           <a>توضیحات</a>
-          <input placeholder="اطلاعات بیشتر را وارد کنید"></input>
+          <input placeholder="اطلاعات بیشتر را وارد کنید" value={desc} onChange={e=>{setdesc(e.target.value)}}></input>
         </div>
 
-        <button onClick={getPhoneValue}>تایید</button>
+        <button onClick={getPhoneValue} >تایید</button>
       </div>
       </div>
       </div>
