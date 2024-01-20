@@ -1,21 +1,18 @@
-![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/3960b69d-7fbe-4641-8491-290abd32cf10)
 Source Project Definition :[DBproject_4021.pdf](https://github.com/alirezasaeednia/universityprojects/files/13905780/DBproject_4021.pdf)
 
 This projects utilizes react for the front end and javascript for the backend.
 Main page:
 
-![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/84eed8ba-d436-421d-9a08-efb59b2214df)
+![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/1e7a8154-be00-463e-99cc-759edf84381b)
 
-Sign in/ Sign up page:
+![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/6bec0a56-c7a0-431f-8951-52a55e1f2781)
 
-![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/da4b2927-e2b2-4a23-a5e1-e4bcff9572d0)
+![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/a26db4a4-6467-4730-aba8-df5231abfcf9)
 
-Sign up for Consultant :
+![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/c1a88eba-da67-44f2-8e10-7bce7a114c98)
 
-![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/18bc5f06-a16b-4765-9e2a-2e07a68d64a9)
+![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/daf0874d-a115-43e5-aa9f-7ba637a40d0b)
 
-![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/e198a9b5-3506-4042-bbf3-68c08942fb18)
+![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/47bbc01c-87d1-455a-b4b7-ffad39edf247)
 
-Ads page:
-
-![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/887cca41-7d3d-49f2-89f1-a1abd5cb07a9)
+![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/716a8760-1393-4725-befe-534310199229)
