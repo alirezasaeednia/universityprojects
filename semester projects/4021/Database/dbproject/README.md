@@ -1,6 +1,6 @@
 Source Project Definition :[DBproject_4021.pdf](https://github.com/alirezasaeednia/universityprojects/files/13905780/DBproject_4021.pdf)
 
-This projects utilizes react for the front end and javascript for the backend.
+This projects utilizes react for the front end and express.js + mysql for the backend.
 Main page:
 
 ![image](https://github.com/alirezasaeednia/universityprojects/assets/100340423/1e7a8154-be00-463e-99cc-759edf84381b)
