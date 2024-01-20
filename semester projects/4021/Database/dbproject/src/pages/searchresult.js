@@ -110,9 +110,23 @@ const Result = () => {
       .catch(error => {
         console.error('Error fetching JSON data:', error);
       });
-  }, [selected,selected2,selected3,sliderValue,sliderValue2,sliderValue3,selected4]);
-
+  }, []);
   
+  
+  useEffect(() => {
+    clearData();
+    axios.get('http://localhost:8001/api/mydata') 
+    .then(response => {
+      setJsonData(response.data);
+    })
+    .catch(error => {
+      console.error('Error fetching JSON data:', error);
+    });
+  }, [selected, selected2, selected3, sliderValue, sliderValue2, sliderValue3, selected4]);
+  const clearData = () => {
+    setJsonData(null);
+  };
+
   const handleSearch = (ww) => {
     axios.post("http://localhost:8001/api/results", { })
     .then(response => {
@@ -245,7 +259,8 @@ const Result = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div id="myjason">
+      <div  class="background-image2"></div>
       {jsonData ? (
       <pre>{JSON.stringify(jsonData, null, 2)}</pre>
     ) : (

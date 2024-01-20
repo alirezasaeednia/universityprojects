@@ -191,6 +191,18 @@ app.get("/api/dataprofile", (req, res) => {
     }
   });
 });
+app.get("/api/mydata", (req, res) => {
+  const query = "SELECT * FROM agahi ORDER BY RAND() LIMIT 4;";
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error(error);
+      console.log('nashod');
+      res.status(500).json({ error: "Failed to fetch data from agahi" });
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
 
 app.get("/", (re, res) => {
     return res.json("from backend side");

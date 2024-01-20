@@ -11,6 +11,7 @@ const Profile = () => {
             <Back/>
 
             <div className="toppicture">
+                <div className="background3"></div>
                 <img src="https://cdn-cashy-static-assets.lucidchart.com/marketing/blog/2019Q2/classroom-seating-chart/classroom-seating-header.png"></img>
             </div>
             
