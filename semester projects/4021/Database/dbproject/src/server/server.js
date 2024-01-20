@@ -168,26 +168,30 @@ app.get("/api/data", (req, res) => {
 });
 
 app.get("/api/dataprofile", (req, res) => {
-  const query = "SELECT * FROM ajans";
-  db.query(query, (error, results) => {
-    if (error) {
-      console.error(error);
-      console.log('nashod');
-      res.status(500).json({ error: "Failed to fetch data from agahi" });
+  const query1 = "SELECT * FROM ajans";
+  const query2 = "SELECT * FROM agahi";
+
+  db.query(query1, (error1, results1) => {
+    if (error1) {
+      console.error(error1);
+      res.status(500).json({ error: "Failed to fetch data from ajans" });
     } else {
-      res.status(200).json(results);
+      db.query(query2, (error2, results2) => {
+        if (error2) {
+          console.error(error2);
+          res.status(500).json({ error: "Failed to fetch data from agahi" });
+        } else {
+          const data = {
+            ajans: results1,
+            agahi: results2
+          };
+          res.status(200).json(data);
+        }
+      });
     }
   });
 });
 
-
-
-
-
-
-
-
-  
 app.get("/", (re, res) => {
     return res.json("from backend side");
   });

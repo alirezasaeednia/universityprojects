@@ -65,6 +65,8 @@ const options2 = [
 const Result = () => {
   const [ price, setPrice ] = useState(40);
   const [jsonData, setJsonData] = useState(null);
+  const [sliderValue2, setSliderValue2] = useState(50); // Initial value of the slider
+  const [sliderValue3, setSliderValue3] = useState(50); // Initial value of the slider
 
   const [selected, setSelected] = useState([]);
   const [selected2, setSelected2] = useState([]);
@@ -98,7 +100,7 @@ const Result = () => {
 }
     }
    
-  }, [selected,nokarbari]);*/
+  }, []);*/
 
   useEffect(() => {
     axios.get('http://localhost:8001/api/data') // Replace '/api/data' with your Express route that returns the JSON data
@@ -108,7 +110,7 @@ const Result = () => {
       .catch(error => {
         console.error('Error fetching JSON data:', error);
       });
-  }, []);
+  }, [selected,selected2,selected3,sliderValue,sliderValue2,sliderValue3,selected4]);
 
   
   const handleSearch = (ww) => {
@@ -125,14 +127,12 @@ const Result = () => {
   };
 
 
-  const [sliderValue2, setSliderValue2] = useState(50); // Initial value of the slider
 
   const handleSliderChange2 = (event) => {
     setSliderValue2(event.target.value);
     handleSearch(sliderValue2);
   };
 
-  const [sliderValue3, setSliderValue3] = useState(50); // Initial value of the slider
 
   const handleSliderChange3 = (event) => {
     setSliderValue3(event.target.value);
