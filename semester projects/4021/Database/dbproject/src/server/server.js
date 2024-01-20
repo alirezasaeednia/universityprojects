@@ -167,6 +167,20 @@ app.get("/api/data", (req, res) => {
   });
 });
 
+app.get("/api/dataprofile", (req, res) => {
+  const query = "SELECT * FROM ajans";
+  db.query(query, (error, results) => {
+    if (error) {
+      console.error(error);
+      console.log('nashod');
+      res.status(500).json({ error: "Failed to fetch data from agahi" });
+    } else {
+      res.status(200).json(results);
+    }
+  });
+});
+
+
 
 
 
