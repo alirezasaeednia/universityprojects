@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NavigationBar from "../Components/NavigationBar";
 import Back from "../Components/goback";
 import { useState } from "react";
@@ -6,8 +6,8 @@ import { MultiSelect } from "react-multi-select-component";
 import axios from "axios";
 
 const options = [
-  { label: "مسکونی", value: "اداری تجاری" },
-  { label: "اداری تجاری", value: "مسکونی" },
+  { label: "مسکونی", value: "maskooni" },
+  { label: "اداری تجاری", value: "edari" },
 ];
 
 const options3 = [
@@ -64,22 +64,55 @@ const options2 = [
 ];
 const Result = () => {
   const [ price, setPrice ] = useState(40);
+  const [jsonData, setJsonData] = useState(null);
 
   const [selected, setSelected] = useState([]);
   const [selected2, setSelected2] = useState([]);
   const [selected3, setSelected3] = useState([]);
   const [selected4, setSelected4] = useState([]);
-
+  const [nokarbari, setnokarbari] = useState('');
   const [sliderValue, setSliderValue] = useState(50); // Initial value of the slider
 
   const handleSliderChange = (event) => {
     setSliderValue(event.target.value);
-    handleSearch();
+    handleSearch(sliderValue);
   };
+
+  /*useEffect(() => {
+    console.log('hello');
+    console.log(selected);
+    if (selected.length > 0) {
+      const hi = selected[0].value;
+       if (hi =='maskooni') {
+      console.log('salam');
+         setnokarbari('maskooni');
+    }
+    else {
+            setnokarbari('');
+    }
+    if (selected.includes('edari')) {
+      setnokarbari('edari');
+    }
+    else {
+      setnokarbari('');
+}
+    }
+   
+  }, [selected,nokarbari]);*/
+
+  useEffect(() => {
+    axios.get('http://localhost:8001/api/data') // Replace '/api/data' with your Express route that returns the JSON data
+      .then(response => {
+        setJsonData(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching JSON data:', error);
+      });
+  }, []);
 
   
   const handleSearch = (ww) => {
-    axios.post("http://localhost:8001/api/results", {  })
+    axios.post("http://localhost:8001/api/results", { })
     .then(response => {
       console.log(response.data.message); // Handle successful insertion
       console.log('hi')
@@ -96,13 +129,15 @@ const Result = () => {
 
   const handleSliderChange2 = (event) => {
     setSliderValue2(event.target.value);
-    handleSearch();
+    handleSearch(sliderValue2);
   };
 
   const [sliderValue3, setSliderValue3] = useState(50); // Initial value of the slider
 
   const handleSliderChange3 = (event) => {
     setSliderValue3(event.target.value);
+    handleSearch(sliderValue3);
+
   };
   return (
     <div>
@@ -210,6 +245,13 @@ const Result = () => {
           </div>
         </div>
       </div>
+      <div>
+      {jsonData ? (
+      <pre>{JSON.stringify(jsonData, null, 2)}</pre>
+    ) : (
+      <p>Loading JSON data...</p>
+    )}
+         </div>
     </div>
   );
 };

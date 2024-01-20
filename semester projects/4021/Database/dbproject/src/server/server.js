@@ -154,22 +154,15 @@ app.post("/api/agahi", (req, res) => {
   });
 });
 
-app.post("/api/results", (req, res) => {
-  const {code, descp, title, bedno, nokarbari, metraj, gheymatejare, gheymatrahn, norahn, mahale, city  } = req.body;
-
-
-  const query =
-    "INSERT INTO agahi  (code, descp, title, bedno, nokarbari, metraj, gheymatejare, gheymatrahn, norahn, mahale, city)  VALUES (?,?,?,?,?,?,?,?,?,?,?)";
-  db.query(query, [code, descp, title, bedno, nokarbari, metraj, gheymatejare, gheymatrahn, norahn, mahale, city  ], (error, results) => {
+app.get("/api/data", (req, res) => {
+  const query = "SELECT * FROM agahi";
+  db.query(query, (error, results) => {
     if (error) {
       console.error(error);
-      res.status(500).json({ error: "Failed to insert moshaver" });
-      console.log("failed");
+      console.log('nashod');
+      res.status(500).json({ error: "Failed to fetch data from agahi" });
     } else {
-      res.status(200).json({ message: "Moshaver inserted successfully" });
-      console.log("agahi inserted successfully");
-      
-   
+      res.status(200).json(results);
     }
   });
 });
