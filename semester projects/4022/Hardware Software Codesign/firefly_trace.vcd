@@ -1,0 +1,48 @@
+$date
+     Jun 11, 2024       10:49:47
+$end
+
+$version
+ SystemC 2.3.4-Accellera --- Mar  8 2024 17:55:17
+$end
+
+$timescale
+     1 ps
+$end
+
+$scope module SystemC $end
+$var wire   32  aaaaa  Best_Price [31:0]  $end
+$var wire   32  aaaab  Total_Weight [31:0]  $end
+$var wire   32  aaaac  Best_Solution_1 [31:0]  $end
+$var wire   32  aaaad  Best_Solution_2 [31:0]  $end
+$var wire   32  aaaae  Best_Solution_3 [31:0]  $end
+$var wire   32  aaaaf  Best_Solution_4 [31:0]  $end
+$var wire   32  aaaag  Best_Solution_5 [31:0]  $end
+$var wire   32  aaaah  Best_Solution_6 [31:0]  $end
+$var wire   32  aaaai  Best_Solution_7 [31:0]  $end
+$var wire   32  aaaaj  Best_Solution_8 [31:0]  $end
+$var wire   32  aaaak  Best_Solution_9 [31:0]  $end
+$var wire   32  aaaal  Best_Solution_10 [31:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+b10001 aaaaa
+b1010 aaaab
+b1 aaaac
+b1 aaaad
+b0 aaaae
+b0 aaaaf
+b1 aaaag
+b0 aaaah
+b0 aaaai
+b0 aaaaj
+b0 aaaak
+b0 aaaal
+$end
+
+#1000000
