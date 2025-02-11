@@ -1,0 +1,449 @@
+ ****** PrimeSim HSPICE -- S-2021.09 win64 (Aug 25 2021 7230000) ******
+  Copyright (c) 1986 - 2025 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: lookuptableeykhodaaaaaaaaaaa.sp                                   
+  Command line options: C:\synopsys\Hspice_S-2021.09\WIN64\hspice.com -i lookuptableeykhodaaaaaaaaaaa.sp -o G:\vlsi\lookuptableeykhodaaaaaaaaaaa.lis
+  Start time: Thu Jan 30 13:57:29 2025
+  lic:  
+  lic: FLEXlm: SDK_12.9.6 
+  lic: USER:   -                    HOSTNAME: alireza 
+  lic: HOSTID: 3c7c3f26db32         PID:      16212 
+  lic: Using FLEXlm license file: 
+  lic: C:\synopsys\synopsys_lic.dat 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 30-dec-2030/2030.12 
+  lic: 1(in_use)/99(total) FLOATING license(s) on SERVER C:\synopsys\synopsys_li
+ c.dat 
+  lic:   
+  **warning** (lookuptableeykhodaaaaaaaaaaa.sp:21) Above line is not allowed within subcircuit. The line is ignored.
+1****** PrimeSim HSPICE -- S-2021.09 win64 (Aug 25 2021 7230000) ******
+ ******  
+ .lookuptable
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xdec.                           decoder3be8        1.00 
+        2 xsram0.                         sram               1.00 
+        3 xsram1.                         sram               1.00 
+        4 xsram2.                         sram               1.00 
+        5 xsram3.                         sram               1.00 
+        6 xsram4.                         sram               1.00 
+        7 xsram5.                         sram               1.00 
+        8 xsram6.                         sram               1.00 
+        9 xsram7.                         sram               1.00 
+       10 xdec.xnota.                     not                1.00 
+       11 xdec.xnotb.                     not                1.00 
+       12 xdec.xnotc.                     not                1.00 
+       13 xdec.xand0.                     nand3              1.00 
+       14 xdec.xand3.                     nand3              1.00 
+       15 xdec.xand4.                     nand3              1.00 
+       16 xdec.xand5.                     nand3              1.00 
+       17 xdec.xand6.                     nand3              1.00 
+       18 xdec.xand1.                     nand3              1.00 
+       19 xdec.xand2.                     nand3              1.00 
+       20 xdec.xand7.                     nand3              1.00 
+       21 xsram0.xnot1.                   not                1.00 
+       22 xsram0.xnot2.                   not                1.00 
+       23 xsram0.xnot3.                   not                1.00 
+       24 xsram0.xnot4.                   not                1.00 
+       25 xsram0.xnot5.                   not                1.00 
+       26 xsram0.xnot7.                   not                1.00 
+       27 xsram0.xand1.                   and                1.00 
+       28 xsram1.xnot1.                   not                1.00 
+       29 xsram1.xnot2.                   not                1.00 
+       30 xsram1.xnot3.                   not                1.00 
+       31 xsram1.xnot4.                   not                1.00 
+       32 xsram1.xnot5.                   not                1.00 
+       33 xsram1.xnot7.                   not                1.00 
+       34 xsram1.xand1.                   and                1.00 
+       35 xsram2.xnot1.                   not                1.00 
+       36 xsram2.xnot2.                   not                1.00 
+       37 xsram2.xnot3.                   not                1.00 
+       38 xsram2.xnot4.                   not                1.00 
+       39 xsram2.xnot5.                   not                1.00 
+       40 xsram2.xnot7.                   not                1.00 
+       41 xsram2.xand1.                   and                1.00 
+       42 xsram3.xnot1.                   not                1.00 
+       43 xsram3.xnot2.                   not                1.00 
+       44 xsram3.xnot3.                   not                1.00 
+       45 xsram3.xnot4.                   not                1.00 
+       46 xsram3.xnot5.                   not                1.00 
+       47 xsram3.xnot7.                   not                1.00 
+       48 xsram3.xand1.                   and                1.00 
+       49 xsram4.xnot1.                   not                1.00 
+       50 xsram4.xnot2.                   not                1.00 
+       51 xsram4.xnot3.                   not                1.00 
+       52 xsram4.xnot4.                   not                1.00 
+       53 xsram4.xnot5.                   not                1.00 
+       54 xsram4.xnot7.                   not                1.00 
+       55 xsram4.xand1.                   and                1.00 
+       56 xsram5.xnot1.                   not                1.00 
+       57 xsram5.xnot2.                   not                1.00 
+       58 xsram5.xnot3.                   not                1.00 
+       59 xsram5.xnot4.                   not                1.00 
+       60 xsram5.xnot5.                   not                1.00 
+       61 xsram5.xnot7.                   not                1.00 
+       62 xsram5.xand1.                   and                1.00 
+       63 xsram6.xnot1.                   not                1.00 
+       64 xsram6.xnot2.                   not                1.00 
+       65 xsram6.xnot3.                   not                1.00 
+       66 xsram6.xnot4.                   not                1.00 
+       67 xsram6.xnot5.                   not                1.00 
+       68 xsram6.xnot7.                   not                1.00 
+       69 xsram6.xand1.                   and                1.00 
+       70 xsram7.xnot1.                   not                1.00 
+       71 xsram7.xnot2.                   not                1.00 
+       72 xsram7.xnot3.                   not                1.00 
+       73 xsram7.xnot4.                   not                1.00 
+       74 xsram7.xnot5.                   not                1.00 
+       75 xsram7.xnot7.                   not                1.00 
+       76 xsram7.xand1.                   and                1.00 
+       77 xdec.xand0.xnot.                not                1.00 
+       78 xdec.xand3.xnot.                not                1.00 
+       79 xdec.xand4.xnot.                not                1.00 
+       80 xdec.xand5.xnot.                not                1.00 
+       81 xdec.xand6.xnot.                not                1.00 
+       82 xdec.xand1.xnot.                not                1.00 
+       83 xdec.xand2.xnot.                not                1.00 
+       84 xdec.xand7.xnot.                not                1.00 
+ ******  
+ .lookuptable
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ ***************************************************************************
+ ***        model parameters  model name:   0:cmosn            model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+       hspver=    2006.03               level=         49         
+      version=        3.1            paramchk=          0         
+       apwarn=          1                lite=          0         
+       vgslim=          0             binUnit=          1         
+       capMod=          0               xpart=          1         
+       mobMod=          1              nqsMod=          0         
+       stiMod=          0                 elm=          5         
+     sfvtflag=          0                 tox=    7.7e-09 meter   
+           xj=      1e-07 meter       binflag=          0         
+         lmin=          0 meter          lmax=          0 meter   
+         wmin=          0 meter          wmax=          0 meter   
+         lref=          0 meter          wref=          0 meter   
+         lint=          0 meter          wint=          0 meter   
+        lmult=          1               wmult=          1         
+           ll=          0                 lln=          1         
+           lw=          0                 lwn=          1         
+          lwl=          0                  wl=          0         
+          wln=          1                  ww=          0         
+          wwn=          1                 wwl=          0         
+          dwg=          0 m/V             dwb=          0 m/V^1/2 
+           xl=          0                  xw=          0         
+           a0=          1                 ags=          0 V^-1    
+           b0=          0 meter            b1=          0 meter   
+         keta=     -0.047 V^-1           voff=      -0.08 V       
+        ngate=          0 cm^-3           vbx=          0 V       
+          vbm=         -3 V                xt=   1.55e-07 meter   
+         vth0=   0.504826 V               nch= 2.3579e+17 cm^-3   
+         nsub=      6e+16 cm^-3           nlx=1.43087e-07 meter   
+       gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+           k1=    0.55428 V^1/2            k2=  0.0155863         
+           k3=    2.34756                 k3b=   -3.31429 V^-1    
+           w0=4.14589e-05 meter          dvt0=        2.2         
+         dvt1=       0.53                dvt2=     -0.032 V^-1    
+        dvt0w=          0 meter^-1      dvt1w=    5.3e+06 meter^-1
+        dvt2w=     -0.032 V^-1           dsub=       0.56         
+         eta0=       0.08                etab=      -0.07 V^-1    
+           u0=      0.067 m^2/V/sec         ua=   2.25e-09 m/V     
+           ub=   5.87e-19 (m/V)^2          uc=  -4.65e-11 V^-1    
+         vsat=      80000 m/sec            a1=          0 v^-1    
+           a2=          1               delta=       0.01 V       
+         rdsw=          0 ohm-um         prwg=          0 V^-1    
+         prwb=          0 V^-1/2           wr=          1         
+         pclm=        1.3             pdiblc1=       0.39         
+      pdiblc2=     0.0086             pdiblcb=          0 V^-1    
+       pscbe1=   4.24e+08 V/m          pscbe2=      1e-05 V/m     
+        drout=       0.56                pvag=          0         
+      nfactor=          1                cdsc=    0.00024 f/m^2   
+        cdscb=          0 f/V/m^2       cdscd=          0 f/V/m^2 
+          cit=          0 f/m^2        alpha0=          0 m/V     
+        beta0=         30 V               dlc=          0 meter   
+          dwc=          0 meter           clc=      1e-07 meter   
+          cle=        0.6                cgso=2.69075e-10 f/m     
+         cgdo=2.69075e-10 f/m            cgbo=          0 f/m     
+         cgsl=          0 f/m            cgdl=          0 f/m     
+       ckappa=        0.6                  cf=8.72587e-11 f/m     
+      vfbflag=          0               vfbcv=         -1 V       
+         tnom=     300.15 K               kt1=      -0.11 V       
+         kt1l=          0                 kt2=      0.022         
+          ute=       -1.5                 ua1=   4.31e-09 m/V     
+          ub1=  -7.61e-18 (m/V)^2         uc1=   -5.6e-11 m/V^2   
+           at=      33000 m/s             prt=          0         
+          using Berkeley noise model       noiMod=          1         
+         noia=      1e+20                noib=      50000         
+         noic=   -1.4e-12                  em=    4.1e+07         
+           ef=          1                  af=          1         
+           kf=          0              gdsnoi=-1.23457e-29         
+          using Hspice diodes            using ACM 
+          acm=         3                 hdif=     5e-07 meter    
+         ldif=         0 meter             js=         0 amp/m^2  
+          jsw=         0 amp/m            xti=         0          
+            n=         1                   cj=0.000101851 f/m^2    
+           mj=       0.5                   pb=       0.8 V        
+         cjsw=         0 f/m             mjsw=      0.33          
+          php=       0.8 V               pbsw (not used)           
+       cjgate=         0 f/m            cjswg (not used)           
+        mjswg (not used)                 pbswg (not used)           
+ ***************************************************************************
+ ***        model parameters  model name:   0:cmosp            model type:pmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+       hspver=    2006.03               level=         49         
+      version=        3.1            paramchk=          0         
+       apwarn=          1                lite=          0         
+       vgslim=          0             binUnit=          1         
+       capMod=          0               xpart=          1         
+       mobMod=          1              nqsMod=          0         
+       stiMod=          0                 elm=          5         
+     sfvtflag=          0                 tox=    7.7e-09 meter   
+           xj=      1e-07 meter       binflag=          0         
+         lmin=          0 meter          lmax=          0 meter   
+         wmin=          0 meter          wmax=          0 meter   
+         lref=          0 meter          wref=          0 meter   
+         lint=          0 meter          wint=          0 meter   
+        lmult=          1               wmult=          1         
+           ll=          0                 lln=          1         
+           lw=          0                 lwn=          1         
+          lwl=          0                  wl=          0         
+          wln=          1                  ww=          0         
+          wwn=          1                 wwl=          0         
+          dwg=          0 m/V             dwb=          0 m/V^1/2 
+           xl=          0                  xw=          0         
+           a0=          1                 ags=          0 V^-1    
+           b0=          0 meter            b1=          0 meter   
+         keta=     -0.047 V^-1           voff=      -0.08 V       
+        ngate=          0 cm^-3           vbx=          0 V       
+          vbm=         -3 V                xt=   1.55e-07 meter   
+         vth0=  -0.689799 V               nch=   8.52e+16 cm^-3   
+         nsub=      6e+16 cm^-3           nlx=3.09622e-07 meter   
+       gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+           k1=   0.413429 V^1/2            k2=-0.00534299         
+           k3=    24.8362                 k3b=   -1.43908 V^-1    
+           w0=2.46769e-06 meter          dvt0=        2.2         
+         dvt1=       0.53                dvt2=     -0.032 V^-1    
+        dvt0w=          0 meter^-1      dvt1w=    5.3e+06 meter^-1
+        dvt2w=     -0.032 V^-1           dsub=       0.56         
+         eta0=       0.08                etab=      -0.07 V^-1    
+           u0=      0.025 m^2/V/sec         ua=   2.25e-09 m/V     
+           ub=   5.87e-19 (m/V)^2          uc=  -4.65e-11 V^-1    
+         vsat=      80000 m/sec            a1=          0 v^-1    
+           a2=          1               delta=       0.01 V       
+         rdsw=          0 ohm-um         prwg=          0 V^-1    
+         prwb=          0 V^-1/2           wr=          1         
+         pclm=        1.3             pdiblc1=       0.39         
+      pdiblc2=     0.0086             pdiblcb=          0 V^-1    
+       pscbe1=   4.24e+08 V/m          pscbe2=      1e-05 V/m     
+        drout=       0.56                pvag=          0         
+      nfactor=          1                cdsc=    0.00024 f/m^2   
+        cdscb=          0 f/V/m^2       cdscd=          0 f/V/m^2 
+          cit=          0 f/m^2        alpha0=          0 m/V     
+        beta0=         30 V               dlc=          0 meter   
+          dwc=          0 meter           clc=      1e-07 meter   
+          cle=        0.6                cgso=2.69075e-10 f/m     
+         cgdo=2.69075e-10 f/m            cgbo=          0 f/m     
+         cgsl=          0 f/m            cgdl=          0 f/m     
+       ckappa=        0.6                  cf=8.72587e-11 f/m     
+      vfbflag=          0               vfbcv=         -1 V       
+         tnom=     300.15 K               kt1=      -0.11 V       
+         kt1l=          0                 kt2=      0.022         
+          ute=       -1.5                 ua1=   4.31e-09 m/V     
+          ub1=  -7.61e-18 (m/V)^2         uc1=   -5.6e-11 m/V^2   
+           at=      33000 m/s             prt=          0         
+          using Berkeley noise model       noiMod=          1         
+         noia=    9.9e+18                noib=       2400         
+         noic=    1.4e-12                  em=    4.1e+07         
+           ef=          1                  af=          1         
+           kf=          0              gdsnoi=-1.23457e-29         
+          using Hspice diodes            using ACM 
+          acm=         3                 hdif=     5e-07 meter    
+         ldif=         0 meter             js=         0 amp/m^2  
+          jsw=         0 amp/m            xti=         0          
+            n=         1                   cj=0.000101851 f/m^2    
+           mj=       0.5                   pb=       0.8 V        
+         cjsw=         0 f/m             mjsw=      0.33          
+          php=       0.8 V               pbsw (not used)           
+       cjgate=         0 f/m            cjswg (not used)           
+        mjswg (not used)                 pbswg (not used)           
+  **info** (lookuptableeykhodaaaaaaaaaaa.sp:87) DC voltage reset to initial transient source value in source 0:va. new dc=0.0000D+00
+ 
+
+  
+
+  **warning** the following singular supplies were terminated to 1 meg resistor 
+          supply       node1            node2
+(lookuptableeykhodaaaaaaaaaaa.sp:93)vphi2                   0:phi2             defined in subckt 0                     0:0                defined in subckt 0               
+(lookuptableeykhodaaaaaaaaaaa.sp:91)vword                   0:wordq1           defined in subckt 0                     0:0                defined in subckt 0               
+(lookuptableeykhodaaaaaaaaaaa.sp:92)vwrite                  0:writeq1          defined in subckt 0                     0:0                defined in subckt 0               
+             
+ Warning:'No DC path nodes' occurs 8 times
+ No DC path from the following nodes,connected with gdcpath:
+ ---------------------------
+ |Node          |Subckt    |
+ |--------------+----------|
+ |xsram0.phi2bar|sram      |
+ |xsram1.phi2bar|sram      |
+ |xsram2.phi2bar|sram      |
+ |xsram3.phi2bar|sram      |
+ |xsram4.phi2bar|sram      |
+ |xsram5.phi2bar|sram      |
+ |xsram6.phi2bar|sram      |
+ |xsram7.phi2bar|sram      |
+ ---------------------------
+              
+             
+ Warning:'1 connection nodes' occurs 10 times
+ Summary of 1 connection from the following nodes:
+ ------------------------
+ |Node      |Subckt     |
+ |----------+-----------|
+ |out       |0          |
+ |xdec.out  |decoder3be8|
+ |xsram0.out|sram       |
+ |xsram1.out|sram       |
+ |xsram2.out|sram       |
+ |xsram3.out|sram       |
+ |xsram4.out|sram       |
+ |xsram5.out|sram       |
+ |xsram6.out|sram       |
+ |xsram7.out|sram       |
+ ------------------------
+              
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+  Opening plot unit= 79
+ file=G:\vlsi\lookuptableeykhodaaaaaaaaaaa.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ .lookuptable
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is voltage   simulation time is     0.     
+     node    =voltage       node    =voltage       node    =voltage
+
+ + 0:a       =   0.       0:b       =   0.       0:c       =   0.     
+ + 0:d0      =   3.3000   0:d1      =   3.3000   0:d2      =   3.3000 
+ + 0:d3      =   9.1038n  0:d4      =   9.1038n  0:d5      =   9.1038n
+ + 0:d6      =   9.1038n  0:d7      =   3.3000   0:datas1  = 346.0413m
+ + 0:datas2  = 346.0413m  0:datas3  = 346.0413m  0:datas4  =   3.3000 
+ + 0:datas5  =   3.3000   0:datas6  =   3.3000   0:datas7  =   3.3000 
+ + 0:datas8  = 346.0413m  0:out     =   0.       0:phi2    =   0.     
+ + 0:vdd     =   3.3000   0:wordq1  =   3.3000   1:abar    =   3.3000 
+ + 1:bbar    =   3.3000   1:cbar    =   3.3000   0:writeq1 =   0.     
+ + 1:out     =   0.       2:1       =   3.3000   2:4       = 166.5531m
+ + 2:5       =   3.3000   2:6       = 166.5531m  2:7       =   2.5882 
+ + 2:10      =   3.3000   2:11      =   9.1039n  2:and_out =   9.1039n
+ + 2:datas1no=   9.1038n  2:out     =   0.       2:phi2bar =   0.     
+ + 2:phi2barn=   3.3000   3:1       =   3.3000   3:4       = 166.5531m
+ + 3:5       =   3.3000   3:6       = 166.5531m  3:7       =   2.5882 
+ + 3:10      =   3.3000   3:11      =   9.1039n  3:and_out =   9.1039n
+ + 3:datas1no=   9.1038n  3:out     =   0.       3:phi2bar =   0.     
+ + 3:phi2barn=   3.3000   4:1       =   3.3000   4:4       = 166.5531m
+ + 4:5       =   3.3000   4:6       = 166.5531m  4:7       =   2.5882 
+ + 4:10      =   3.3000   4:11      =   9.1039n  4:and_out =   9.1039n
+ + 4:datas1no=   9.1038n  4:out     =   0.       4:phi2bar =   0.     
+ + 4:phi2barn=   3.3000   5:1       =   3.3000   5:4       =   3.3000 
+ + 5:5       =  13.9407n  5:6       = 802.3128m  5:7       =   4.8368n
+ + 5:10      =   9.1038n  5:11      =   3.3000   5:and_out =   3.9829n
+ + 5:datas1no=   3.3000   5:out     =   0.       5:phi2bar =   0.     
+ + 5:phi2barn=   3.3000   6:1       =   3.3000   6:4       =   3.3000 
+ + 6:5       =  13.9407n  6:6       = 802.3128m  6:7       =   4.8368n
+ + 6:10      =   9.1038n  6:11      =   3.3000   6:and_out =   3.9829n
+ + 6:datas1no=   3.3000   6:out     =   0.       6:phi2bar =   0.     
+ + 6:phi2barn=   3.3000   7:1       =   3.3000   7:4       =   3.3000 
+ + 7:5       =  13.9407n  7:6       = 802.3128m  7:7       =   4.8368n
+ + 7:10      =   9.1038n  7:11      =   3.3000   7:and_out =   3.9829n
+ + 7:datas1no=   3.3000   7:out     =   0.       7:phi2bar =   0.     
+ + 7:phi2barn=   3.3000   8:1       =   3.3000   8:4       =   3.3000 
+ + 8:5       =  13.9407n  8:6       = 802.3128m  8:7       =   4.8368n
+ + 8:10      =   9.1038n  8:11      =   3.3000   8:and_out =   3.9829n
+ + 8:datas1no=   3.3000   8:out     =   0.       8:phi2bar =   0.     
+ + 8:phi2barn=   3.3000   9:1       =   3.3000   9:4       = 166.5531m
+ + 9:5       =   3.3000   9:6       = 166.5531m  9:7       =   2.5882 
+ + 9:10      =   3.3000   9:11      =   9.1039n  9:and_out =   9.1039n
+ + 9:datas1no=   9.1038n  9:out     =   0.       9:phi2bar =   0.     
+ + 9:phi2barn=   3.3000  13:1       =  54.6230n 13:2       =  27.3115n
+ +13:out     =  81.9345n 14:1       =   2.5911  14:2       = 626.4703m
+ +14:out     =   3.3000  15:1       =   9.6737n 15:2       =   4.8368n
+ +15:out     =   3.3000  16:1       = 536.2568m 16:2       = 536.2568m
+ +16:out     =   3.3000  17:1       = 802.3128m 17:2       =   1.2319n
+ +17:out     =   3.3000  18:1       =   0.      18:2       =   0.     
+ +18:out     =   0.      19:1       =   0.      19:2       =   0.     
+ +19:out     =   0.      20:1       =   0.      20:2       =   0.     
+ +20:out     =   0.      27:12      =   3.3000  34:12      =   3.3000 
+ +41:12      =   3.3000  48:12      =   2.4750  55:12      =   2.4750 
+ +62:12      =   2.4750  69:12      =   2.4750  76:12      =   3.3000 
+
+
+          ***** job concluded
+ ******  
+ .lookuptable
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     6
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =     157 # elements   =     349
+  # resistors   =       3 # capacitors =      77 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       7
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =     262 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          27
+  transient          1.53   500000001       13949        5032 rev=       152
+  readin             0.01
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         89.08 megabytes
+           total cpu time            1.56 seconds
+           total elapsed time       10.10 seconds
+           job started at     13:57:29 01/30/2025
+           job ended   at     13:57:39 01/30/2025
+           job total runtime        10.10 seconds
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        8.54(s)

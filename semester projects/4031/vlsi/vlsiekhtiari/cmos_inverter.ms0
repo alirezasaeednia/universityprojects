@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'invertercmos_barayeemtiazi'
+ voh              vol              vm               vil             
+ vih              nml              nmh              vth_nmos        
+ vth_pmos         temper           alter#          
+    3.3000         4.375e-09          1.2638           0.9172       
+    1.4211           0.9172           1.8789           0.5401       
+    0.5409          25.0000        1               

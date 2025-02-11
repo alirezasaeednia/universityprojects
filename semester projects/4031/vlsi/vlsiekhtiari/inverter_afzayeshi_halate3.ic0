@@ -1,0 +1,17 @@
+* "simulator" "PrimeSim HSPICE"
+* "version" "S-2021.09 win64"
+* "format" "HSP"
+* "rundate" "20:10:37 01/30/2025 "
+* "netlist" "inverter_afzayeshi_halate3.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ b =   0.            
++ out =   2.6380        
++ vbias =   2.5000        
++ vdd =   3.3000        
+***   END: Saved Operating Point ***                     

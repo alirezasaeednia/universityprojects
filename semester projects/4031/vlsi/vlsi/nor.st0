@@ -1,0 +1,52 @@
+****** PrimeSim HSPICE -- S-2021.09 win64 (Aug 25 2021 7230000) ******
+Input File: nor.sp
+lic:
+lic: FLEXlm: SDK_12.9.6
+lic: USER:   -                    HOSTNAME: alireza
+lic: HOSTID: 3c7c3f26db32         PID:      18600
+lic: Using FLEXlm license file:
+lic: C:\synopsys\synopsys_lic.dat
+lic: Checkout 1 hspice
+lic: License/Maintenance for hspice will expire on 30-dec-2030/2030.12
+lic: 1(in_use)/99(total) FLOATING license(s) on SERVER C:\synopsys\synopsys_lic.dat
+lic:
+
+ init: begin read circuit files, cpu clock= 6.52E+00
+       option search = C:/synopsys/Hspice_S-2021.09/parts/behave/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/AD/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/XILINX/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/TLINE/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/TI/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/SIGNET/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/PCI/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/LIN_TECH/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/PET/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/DI0/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/COMLINE/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/BURR_BRM/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/BJT/
+       option post
+ init: end read circuit files, cpu clock= 6.52E+00 peak memory=      88 mb
+ init: begin check errors, cpu clock= 6.52E+00
+ init: end check errors, cpu clock= 6.53E+00 peak memory=      88 mb
+ init: begin setup matrix, pivot=     0 cpu clock= 6.53E+00
+       establish matrix -- done, cpu clock= 6.53E+00 peak memory=      88 mb
+       re-order matrix -- done, cpu clock= 6.53E+00 peak memory=      88 mb
+ init: end setup matrix, cpu clock= 6.53E+00 peak memory=      88 mb
+ dcop: begin dcop, cpu clock= 6.53E+00
+ dcop: end dcop, cpu clock= 6.53E+00 peak memory=      88 mb tot_iter=       3
+ output: G:\vlsi\nor.tr0
+ sweep: tran tran0    begin, stop_t=  1.00E-04 #sweeps=**** cpu clock= 6.53E+00
+ tran: time= 1.0001E-05 tot_iter=     161 conv_iter=      75 cpu clock= 6.53E+00
+ tran: time= 2.0000E-05 tot_iter=     250 conv_iter=     115 cpu clock= 6.53E+00
+ tran: time= 3.0001E-05 tot_iter=     393 conv_iter=     180 cpu clock= 6.53E+00
+ tran: time= 4.0000E-05 tot_iter=     482 conv_iter=     220 cpu clock= 6.53E+00
+ tran: time= 5.0001E-05 tot_iter=     625 conv_iter=     285 cpu clock= 6.53E+00
+ tran: time= 6.0000E-05 tot_iter=     714 conv_iter=     325 cpu clock= 6.53E+00
+ tran: time= 7.0001E-05 tot_iter=     857 conv_iter=     390 cpu clock= 6.53E+00
+ tran: time= 8.0000E-05 tot_iter=     946 conv_iter=     430 cpu clock= 6.53E+00
+ tran: time= 9.0001E-05 tot_iter=    1089 conv_iter=     495 cpu clock= 6.54E+00
+ tran: time= 1.0000E-04 tot_iter=    1178 conv_iter=     535 cpu clock= 6.54E+00
+ sweep: tran tran0    end, cpu clock= 6.54E+00 peak memory=      88 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

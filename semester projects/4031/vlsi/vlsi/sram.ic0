@@ -1,0 +1,30 @@
+* "simulator" "PrimeSim HSPICE"
+* "version" "S-2021.09 win64"
+* "format" "HSP"
+* "rundate" "16:46:50 01/11/2025 "
+* "netlist" "sram.sp "
+* "runtitle" "sram 6 transistori ba bitline conditioning va write driver"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ 1 =   1.4766        
++ 2 =   1.4766        
++ 4 =   1.4766        
++ 5 =   1.4766        
++ 6 =  85.2216n       
++ 7 =  30.5403m       
++ 10 =   1.4766        
++ 11 =   1.4764        
++ and_out =   2.7851        
++ datas1 =   3.3000        
++ datas1not =  14.8255n       
++ phi2bar =   3.3000        
++ phi2barnot =  14.8255n       
++ vdd =   3.3000        
++ wordq1 =   3.3000        
++ writeq1 =   0.            
++ xand1.12 =   2.9778        
+***   END: Saved Operating Point ***                     

@@ -1,0 +1,16 @@
+* "simulator" "PrimeSim HSPICE"
+* "version" "S-2021.09 win64"
+* "format" "HSP"
+* "rundate" "23:08:41 01/30/2025 "
+* "netlist" "depletionload.sp "
+* "runtitle" "takhlie iii"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   0.            
++ out =   3.3000        
++ vdd =   3.3000        
+***   END: Saved Operating Point ***                     

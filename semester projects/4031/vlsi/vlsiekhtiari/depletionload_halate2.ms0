@@ -1,0 +1,8 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE 'takhlie iii'
+ voh              vol              vm               vil             
+ vih              nml              nmh              vth_nmos        
+ temper           alter#          
+    3.3000           0.3485           1.7024           1.0837       
+    1.9182           0.7352           1.3818           0.5620       
+   25.0000        1               

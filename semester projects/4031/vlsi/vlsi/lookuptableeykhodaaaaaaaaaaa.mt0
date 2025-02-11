@@ -1,0 +1,6 @@
+$DATA1 SOURCE='PrimeSim HSPICE' VERSION='S-2021.09 win64' PARAM_COUNT=0
+.TITLE '.lookuptable'
+ trise            tfall            tpd              tpd_f           
+ temper           alter#          
+    failed           failed           failed           failed       
+   25.0000        1               

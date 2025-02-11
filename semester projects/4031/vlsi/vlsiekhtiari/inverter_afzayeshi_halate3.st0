@@ -1,0 +1,55 @@
+****** PrimeSim HSPICE -- S-2021.09 win64 (Aug 25 2021 7230000) ******
+Input File: inverter_afzayeshi_halate3.sp
+lic:
+lic: FLEXlm: SDK_12.9.6
+lic: USER:   -                    HOSTNAME: alireza
+lic: HOSTID: 3c7c3f26db32         PID:      4632
+lic: Using FLEXlm license file:
+lic: C:\synopsys\synopsys_lic.dat
+lic: Checkout 1 hspice
+lic: License/Maintenance for hspice will expire on 30-dec-2030/2030.12
+lic: 1(in_use)/99(total) FLOATING license(s) on SERVER C:\synopsys\synopsys_lic.dat
+lic:
+
+ init: begin read circuit files, cpu clock= 8.91E+00
+       option search = C:/synopsys/Hspice_S-2021.09/parts/behave/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/AD/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/XILINX/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/TLINE/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/TI/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/SIGNET/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/PCI/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/LIN_TECH/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/PET/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/DI0/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/COMLINE/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/BURR_BRM/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/BJT/
+       option post
+ init: end read circuit files, cpu clock= 8.91E+00 peak memory=      86 mb
+ init: begin check errors, cpu clock= 8.91E+00
+ init: end check errors, cpu clock= 8.92E+00 peak memory=      87 mb
+ init: begin setup matrix, pivot=     0 cpu clock= 8.92E+00
+       establish matrix -- done, cpu clock= 8.92E+00 peak memory=      87 mb
+       re-order matrix -- done, cpu clock= 8.92E+00 peak memory=      87 mb
+ init: end setup matrix, cpu clock= 8.92E+00 peak memory=      87 mb
+ output: G:\vlsiekhtiari\inverter_afzayeshi_halate3.ms0
+ sweep: dc dc0    begin, #sweeps= 331 cpu clock= 8.92E+00
+ sweep: dc dc0    end, cpu clock= 8.93E+00 peak memory=      87 mb
+ dcop: begin dcop, cpu clock= 8.93E+00
+ dcop: end dcop, cpu clock= 8.93E+00 peak memory=      87 mb tot_iter=      18
+ output: G:\vlsiekhtiari\inverter_afzayeshi_halate3.tr0
+ sweep: tran tran0    begin, stop_t=  1.00E-04 #sweeps=**** cpu clock= 8.94E+00
+ tran: time= 1.0001E-05 tot_iter=      71 conv_iter=      33 cpu clock= 8.94E+00
+ tran: time= 2.0000E-05 tot_iter=     148 conv_iter=      71 cpu clock= 8.94E+00
+ tran: time= 3.0001E-05 tot_iter=     212 conv_iter=      99 cpu clock= 8.95E+00
+ tran: time= 4.0000E-05 tot_iter=     289 conv_iter=     137 cpu clock= 8.95E+00
+ tran: time= 5.0001E-05 tot_iter=     353 conv_iter=     165 cpu clock= 8.95E+00
+ tran: time= 6.0000E-05 tot_iter=     430 conv_iter=     203 cpu clock= 8.95E+00
+ tran: time= 7.0001E-05 tot_iter=     494 conv_iter=     231 cpu clock= 8.95E+00
+ tran: time= 8.0000E-05 tot_iter=     571 conv_iter=     269 cpu clock= 8.95E+00
+ tran: time= 9.0001E-05 tot_iter=     635 conv_iter=     297 cpu clock= 8.95E+00
+ tran: time= 1.0000E-04 tot_iter=     712 conv_iter=     335 cpu clock= 8.95E+00
+ sweep: tran tran0    end, cpu clock= 8.95E+00 peak memory=      87 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

@@ -1,0 +1,7 @@
+Questionable use of curly braces in "node ={voltage} node ={voltage} node ={voltage} 0:1 = 3.3000 0:in = 0. 0:out = 350.1804m"
+    Error: undefined symbol in: "[voltage]"
+Questionable use of curly braces in "node =(voltage) node ={voltage} node ={voltage} 0:1 = 3.3000 0:in = 0. 0:out = 350.1804m"
+    Error: undefined symbol in: "[voltage]"
+Questionable use of curly braces in "node =(voltage) node =(voltage) node ={voltage} 0:1 = 3.3000 0:in = 0. 0:out = 350.1804m"
+    Error: undefined symbol in: "[voltage]"
+Fatal Error: Mutual Inductance card missing coupled inductor: k1= 0.55428 v^1/2 k2= 0.0155863

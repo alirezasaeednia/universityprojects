@@ -1,0 +1,52 @@
+* "simulator" "PrimeSim HSPICE"
+* "version" "S-2021.09 win64"
+* "format" "HSP"
+* "rundate" "17:25:02 01/30/2025 "
+* "netlist" "decoder3be8.sp "
+* "runtitle" ".decoder3be8"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   3.3000        
++ abar =   9.1122n       
++ b =   3.3000        
++ bbar =   9.1122n       
++ c =   3.3000        
++ cbar =   9.1122n       
++ d0 =   9.1122n       
++ d1 =   9.1122n       
++ d2 =   9.1122n       
++ d3 =   9.1122n       
++ d4 =   9.1122n       
++ d5 =   9.1122n       
++ d6 =   9.1122n       
++ d7 =   3.3000        
++ vdd =   3.3000        
++ xand0.1 = 870.8549m       
++ xand0.2 = 183.6352m       
++ xand0.out =   3.3000        
++ xand1.1 = 784.4931m       
++ xand1.2 =   1.3068n       
++ xand1.out =   3.3000        
++ xand2.1 = 524.8178m       
++ xand2.2 = 524.8178m       
++ xand2.out =   3.3000        
++ xand3.1 =   9.9994n       
++ xand3.2 =   4.9997n       
++ xand3.out =   3.3000        
++ xand4.1 =   2.5724        
++ xand4.2 = 604.4858m       
++ xand4.out =   3.3000        
++ xand5.1 =   2.5688        
++ xand5.2 =   3.8915n       
++ xand5.out =   3.3000        
++ xand6.1 =   2.5536        
++ xand6.2 =   2.5358        
++ xand6.out =   3.3000        
++ xand7.1 =  54.6732n       
++ xand7.2 =  27.3366n       
++ xand7.out =  82.0099n       
+***   END: Saved Operating Point ***                     

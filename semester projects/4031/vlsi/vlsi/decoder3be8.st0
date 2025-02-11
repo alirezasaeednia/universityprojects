@@ -1,0 +1,52 @@
+****** PrimeSim HSPICE -- S-2021.09 win64 (Aug 25 2021 7230000) ******
+Input File: decoder3be8.sp
+lic:
+lic: FLEXlm: SDK_12.9.6
+lic: USER:   -                    HOSTNAME: alireza
+lic: HOSTID: 3c7c3f26db32         PID:      6836
+lic: Using FLEXlm license file:
+lic: C:\synopsys\synopsys_lic.dat
+lic: Checkout 1 hspice
+lic: License/Maintenance for hspice will expire on 30-dec-2030/2030.12
+lic: 1(in_use)/99(total) FLOATING license(s) on SERVER C:\synopsys\synopsys_lic.dat
+lic:
+
+ init: begin read circuit files, cpu clock= 7.53E+00
+       option search = C:/synopsys/Hspice_S-2021.09/parts/behave/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/AD/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/XILINX/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/TLINE/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/TI/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/SIGNET/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/PCI/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/LIN_TECH/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/PET/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/DI0/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/COMLINE/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/BURR_BRM/
+       option search = C:/synopsys/Hspice_S-2021.09/parts/BJT/
+       option post
+ init: end read circuit files, cpu clock= 7.54E+00 peak memory=      87 mb
+ init: begin check errors, cpu clock= 7.54E+00
+ init: end check errors, cpu clock= 7.54E+00 peak memory=      87 mb
+ init: begin setup matrix, pivot=     0 cpu clock= 7.54E+00
+       establish matrix -- done, cpu clock= 7.54E+00 peak memory=      87 mb
+       re-order matrix -- done, cpu clock= 7.54E+00 peak memory=      87 mb
+ init: end setup matrix, cpu clock= 7.54E+00 peak memory=      87 mb
+ dcop: begin dcop, cpu clock= 7.54E+00
+ dcop: end dcop, cpu clock= 7.54E+00 peak memory=      87 mb tot_iter=      27
+ output: G:\vlsi\decoder3be8.tr0
+ sweep: tran tran0    begin, stop_t=  1.00E-03 #sweeps=**** cpu clock= 7.54E+00
+ tran: time= 1.0495E-04 tot_iter=      34 conv_iter=      17 cpu clock= 7.55E+00
+ tran: time= 2.0495E-04 tot_iter=      38 conv_iter=      19 cpu clock= 7.55E+00
+ tran: time= 3.0495E-04 tot_iter=      42 conv_iter=      21 cpu clock= 7.55E+00
+ tran: time= 4.0495E-04 tot_iter=      46 conv_iter=      23 cpu clock= 7.55E+00
+ tran: time= 5.0495E-04 tot_iter=      50 conv_iter=      25 cpu clock= 7.55E+00
+ tran: time= 6.0495E-04 tot_iter=      54 conv_iter=      27 cpu clock= 7.55E+00
+ tran: time= 7.0495E-04 tot_iter=      58 conv_iter=      29 cpu clock= 7.55E+00
+ tran: time= 8.0495E-04 tot_iter=      62 conv_iter=      31 cpu clock= 7.55E+00
+ tran: time= 9.0495E-04 tot_iter=      66 conv_iter=      33 cpu clock= 7.55E+00
+ tran: time= 1.0000E-03 tot_iter=      70 conv_iter=      35 cpu clock= 7.55E+00
+ sweep: tran tran0    end, cpu clock= 7.55E+00 peak memory=      87 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)
